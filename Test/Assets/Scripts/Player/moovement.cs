@@ -10,6 +10,9 @@ public class moove : MonoBehaviour
     private Vector3 moveD = Vector3.zero;
 
     CharacterController Cac;
+
+    [SerializeField]
+    private float forceMagnitude;
     
     // Start is called before the first frame update
     void Start()
@@ -31,5 +34,22 @@ public class moove : MonoBehaviour
         moveD.y -= gravity * Time.deltaTime;
 
         Cac.Move(moveD * Time.deltaTime);
+    }
+
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        var rigidBody = hit.collider.attachedRigidbody;
+
+        if (rigidBody != null)
+        {
+            var forceDirection = hit.gameObject.transform.position - transform.position;
+            forceDirection.y = 0;
+            forceDirection.Normalize();
+            
+            rigidBody.AddForceAtPosition(forceDirection * forceMagnitude, transform.position, ForceMode.Impulse);
+
+            
+        }
     }
 }
