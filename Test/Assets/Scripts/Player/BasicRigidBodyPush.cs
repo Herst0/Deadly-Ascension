@@ -2,34 +2,40 @@
 
 public class BasicRigidBodyPush : MonoBehaviour
 {
-	public LayerMask pushLayers;
-	public bool canPush;
-	[Range(0.5f, 5f)] public float strength = 1.1f;
+	[Header("Push Settings")]
+	[SerializeField] private LayerMask pushLayersMask;
+	[SerializeField] private bool canPush = true;
+	[SerializeField, Range(0.5f, 5f)] private float strength = 1.1f;
+
+	private const float minVerticalThreshold = -0.3f;
 
 	private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
-		if (canPush) PushRigidBodies(hit);
+		if (canPush)
+		{
+			PushRigidBodies(hit);
+		}
 	}
 
 	private void PushRigidBodies(ControllerColliderHit hit)
 	{
-		// https://docs.unity3d.com/ScriptReference/CharacterController.OnControllerColliderHit.html
+		if (hit.collider == null || hit.collider.attachedRigidbody == null || hit.collider.attachedRigidbody.isKinematic)
+		{
+			return;
+		}
 
-		// make sure we hit a non kinematic rigidbody
-		Rigidbody body = hit.collider.attachedRigidbody;
-		if (body == null || body.isKinematic) return;
+		var body = hit.collider.attachedRigidbody;
 
-		// make sure we only push desired layer(s)
 		var bodyLayerMask = 1 << body.gameObject.layer;
-		if ((bodyLayerMask & pushLayers.value) == 0) return;
+		if ((bodyLayerMask & pushLayersMask.value) == 0 || hit.moveDirection.y < minVerticalThreshold)
+		{
+			return;
+		}
 
-		// We dont want to push objects below us
-		if (hit.moveDirection.y < -0.3f) return;
+		var pushDir = new Vector3(hit.moveDirection.x, 0.0f, hit.moveDirection.z);
 
-		// Calculate push direction from move direction, horizontal motion only
-		Vector3 pushDir = new Vector3(hit.moveDirection.x, 0.0f, hit.moveDirection.z);
-
-		// Apply the push and take strength into account
-		body.AddForce(pushDir * strength, ForceMode.Impulse);
-	}
+		// Use ForceMode.VelocityChange instead of ForceMode.Impulse
+		body.AddForce(pushDir * strength, ForceMode.VelocityChange);
+    }
+	
 }
