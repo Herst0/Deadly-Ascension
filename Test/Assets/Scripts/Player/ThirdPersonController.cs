@@ -14,6 +14,7 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
+        public float LookSensitivity = 1f;
         private bool isInAir;
         private float inAirTimer;
         public float inAirDuration = 1.0f; // Adjust the duration as needed
@@ -202,8 +203,8 @@ namespace StarterAssets
                 //Don't multiply mouse input by Time.deltaTime;
                 float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-                _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier;
-                _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier;
+                _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier * LookSensitivity;
+                _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier* LookSensitivity;
             }
 
             // clamp our rotations so our values are limited 360 degrees
