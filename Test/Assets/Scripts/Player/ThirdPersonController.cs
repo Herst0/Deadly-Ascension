@@ -14,7 +14,7 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
-        public float LookSensitivity = 1f;
+        public float Sensitivity = 1f;
         private bool isInAir;
         private float inAirTimer;
         public float inAirDuration = 1.0f; // Adjust the duration as needed
@@ -203,8 +203,8 @@ namespace StarterAssets
                 //Don't multiply mouse input by Time.deltaTime;
                 float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-                _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier * LookSensitivity;
-                _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier* LookSensitivity;
+                _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier * Sensitivity;
+                _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier* Sensitivity;
             }
 
             // clamp our rotations so our values are limited 360 degrees
@@ -358,6 +358,11 @@ namespace StarterAssets
             Gizmos.DrawSphere(
                 new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
                 GroundedRadius);
+        }
+
+        public void SetSensitivity(float newSensitivity)
+        {
+            Sensitivity = newSensitivity;
         }
 
         private void OnFootstep(AnimationEvent animationEvent)
