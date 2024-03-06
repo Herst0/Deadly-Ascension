@@ -1,41 +1,44 @@
 ﻿using UnityEngine;
 
-public class BasicRigidBodyPush : MonoBehaviour
+namespace Player
 {
-	[Header("Push Settings")]
-	[SerializeField] private LayerMask pushLayersMask;
-	[SerializeField] private bool canPush = true;
-	[SerializeField, Range(0.5f, 5f)] private float strength = 1.1f;
-
-	private const float minVerticalThreshold = -0.3f;
-
-	private void OnControllerColliderHit(ControllerColliderHit hit)
+	public class BasicRigidBodyPush : MonoBehaviour
 	{
-		if (canPush)
-		{
-			PushRigidBodies(hit);
-		}
-	}
+		[Header("Push Settings")]
+		[SerializeField] private LayerMask pushLayersMask;
+		[SerializeField] private bool canPush = true;
+		[SerializeField, Range(0.5f, 5f)] private float strength = 1.1f;
 
-	private void PushRigidBodies(ControllerColliderHit hit)
-	{
-		if (hit.collider == null || hit.collider.attachedRigidbody == null || hit.collider.attachedRigidbody.isKinematic)
-		{
-			return;
-		}
+		private const float minVerticalThreshold = -0.3f;
 
-		var body = hit.collider.attachedRigidbody;
-
-		var bodyLayerMask = 1 << body.gameObject.layer;
-		if ((bodyLayerMask & pushLayersMask.value) == 0 || hit.moveDirection.y < minVerticalThreshold)
+		private void OnControllerColliderHit(ControllerColliderHit hit)
 		{
-			return;
+			if (canPush)
+			{
+				PushRigidBodies(hit);
+			}
 		}
 
-		var pushDir = new Vector3(hit.moveDirection.x, 0.0f, hit.moveDirection.z);
+		private void PushRigidBodies(ControllerColliderHit hit)
+		{
+			if (hit.collider == null || hit.collider.attachedRigidbody == null || hit.collider.attachedRigidbody.isKinematic)
+			{
+				return;
+			}
 
-		// Use ForceMode.VelocityChange instead of ForceMode.Impulse
-		body.AddForce(pushDir * strength, ForceMode.VelocityChange);
-    }
+			var body = hit.collider.attachedRigidbody;
+
+			var bodyLayerMask = 1 << body.gameObject.layer;
+			if ((bodyLayerMask & pushLayersMask.value) == 0 || hit.moveDirection.y < minVerticalThreshold)
+			{
+				return;
+			}
+
+			var pushDir = new Vector3(hit.moveDirection.x, 0.0f, hit.moveDirection.z);
+
+			// Use ForceMode.VelocityChange instead of ForceMode.Impulse
+			body.AddForce(pushDir * strength, ForceMode.VelocityChange);
+		}
 	
+	}
 }
