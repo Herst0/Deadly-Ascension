@@ -4,6 +4,8 @@ namespace Player
 {
     public class BulletProjectile : MonoBehaviour
     {
+        [SerializeField] private Transform vfxHitGreen;
+        [SerializeField] private Transform vfxHitRed;
 
         private Rigidbody bulletRigidbody;
 
@@ -14,12 +16,20 @@ namespace Player
 
         private void Start()
         {
-            float speed = 10f;
+            float speed = 30f;
             bulletRigidbody.velocity = transform.forward * speed;
         }
 
         private void OnTriggerEnter(Collider other)
         {
+            if (other.GetComponent<BulletTarget>()!=null)
+            {
+                Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(vfxHitRed, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
     }

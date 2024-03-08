@@ -14,12 +14,15 @@ namespace Player
   [SerializeField] private Transform pfBulletProjectile;
   [SerializeField] private Transform spawnBulletPosition;
   
+  
   private StarterAssetsInputs starterAssetsInputs;
   private ThirdPersonController thirdPersonController;
+  private Animator animator;
   private void Awake()
   {
    thirdPersonController = GetComponent<ThirdPersonController>();
    starterAssetsInputs = GetComponent<StarterAssetsInputs>();
+   animator = GetComponent<Animator>();
   }
 
   private void Update()
@@ -38,6 +41,8 @@ namespace Player
     aimVirtualCamera.gameObject.SetActive(true);
     thirdPersonController.SetSensitivity(aimSensitivity);
     thirdPersonController.SetRotateOnMove(false);
+    animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1),1f,Time.deltaTime*10f));
+    
     Vector3 worldAimTarget = mouseWorldPosition;
     worldAimTarget.y = transform.position.y;
     Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
@@ -49,6 +54,7 @@ namespace Player
     aimVirtualCamera.gameObject.SetActive(false);
     thirdPersonController.SetSensitivity(normalSensitivity);
     thirdPersonController.SetRotateOnMove(true);
+    animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1),0f,Time.deltaTime*10f));
    }
 
    if (starterAssetsInputs.shoot)
