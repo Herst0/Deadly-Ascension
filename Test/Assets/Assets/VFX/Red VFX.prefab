@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 732581016440385282, guid: fbd13a96b67814f43b5c9b191ecfd50a, type: 3}
       propertyPath: m_Name
-      value: Particle System Variant
+      value: Red VFX
       objectReference: {fileID: 0}
     - target: {fileID: 1342134800519848596, guid: fbd13a96b67814f43b5c9b191ecfd50a, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -23,6 +23,18 @@ PrefabInstance:
     - target: {fileID: 1342134800519848596, guid: fbd13a96b67814f43b5c9b191ecfd50a, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342134800519848596, guid: fbd13a96b67814f43b5c9b191ecfd50a, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342134800519848596, guid: fbd13a96b67814f43b5c9b191ecfd50a, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342134800519848596, guid: fbd13a96b67814f43b5c9b191ecfd50a, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.5660378
       objectReference: {fileID: 0}
     - target: {fileID: 6894908368207602050, guid: fbd13a96b67814f43b5c9b191ecfd50a, type: 3}
       propertyPath: m_LocalPosition.x

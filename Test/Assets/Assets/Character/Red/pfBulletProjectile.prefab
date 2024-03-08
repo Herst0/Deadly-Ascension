@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9e41d4f0b091b4ab92e20ca6892fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxHitGreen: {fileID: 6894908368207602050, guid: fbd13a96b67814f43b5c9b191ecfd50a, type: 3}
-  vfxHitRed: {fileID: 1550503277990743736, guid: c074cc90e58139046a66d4897b327fee, type: 3}
+  vfxHitGreen: {fileID: 1550503277990743736, guid: c074cc90e58139046a66d4897b327fee, type: 3}
+  vfxHitRed: {fileID: 6894908368207602050, guid: fbd13a96b67814f43b5c9b191ecfd50a, type: 3}
 --- !u!1 &4494081868508349387
 GameObject:
   m_ObjectHideFlags: 0
