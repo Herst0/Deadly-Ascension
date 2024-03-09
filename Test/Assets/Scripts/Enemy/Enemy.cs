@@ -7,6 +7,7 @@ namespace Enemy
 {
     public class Enemies : MonoBehaviour
     {
+        public int enemyHP = 100;
         public float lookradius = 10f;
         private Transform target;
         private NavMeshAgent agent;
@@ -42,6 +43,19 @@ namespace Enemy
         {
             Gizmos.color=Color.red;
             Gizmos.DrawWireSphere(transform.position, lookradius);
+        }
+
+        public void TakeDamage(int damageAmount)
+        {
+            enemyHP = enemyHP - damageAmount;
+            if (enemyHP<=0)
+            {
+                //death animation
+            }
+            else
+            {
+                //damage animation
+            }
         }
     }
 }
