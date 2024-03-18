@@ -8,7 +8,6 @@ namespace Player
     public class ThirdPersonShooter : MonoBehaviour
     {
         [SerializeField] private CinemachineVirtualCamera aimVirtualCamera;
-        [SerializeField] private GameObject crosshair;
         [SerializeField] private GameObject sphere;
         [SerializeField] private float normalSensitivity;
         [SerializeField] private float aimSensitivity;
@@ -16,6 +15,7 @@ namespace Player
         [SerializeField] private Transform debugTransform;
         [SerializeField] private Transform pfBulletProjectile;
         [SerializeField] private Transform spawnBulletPosition;
+        private Vector3 spherePosition;
 
         private StarterAssetsInputs starterAssetsInputs;
         private ThirdPersonController thirdPersonController;
@@ -27,21 +27,23 @@ namespace Player
             starterAssetsInputs = GetComponent<StarterAssetsInputs>();
             animator = GetComponent<Animator>();
 
-            // Assurez-vous que le crosshair et la sphère sont désactivés au démarrage
-            crosshair.SetActive(false);
+            // Assurez-vous que  la sphère est désactivé au démarrage
+           
             sphere.SetActive(false);
         }
 
         private void Update()
         {
             Vector3 mouseWorldPosition = Vector3.zero;
-            Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
+// Décaler le centre de l'écran vers le bas et la gauche
+            Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f - 20f);
             Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
             if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
             {
                 debugTransform.position = raycastHit.point;
                 mouseWorldPosition = raycastHit.point;
             }
+            spherePosition = raycastHit.point;
 
             if (starterAssetsInputs.aim)
             {
@@ -50,8 +52,7 @@ namespace Player
                 thirdPersonController.SetRotateOnMove(false);
                 animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 1f, Time.deltaTime * 10f));
 
-                // Activer le crosshair et la sphère lorsque le joueur vise
-                crosshair.SetActive(true);
+                // Activer la sphère lorsque le joueur vise
                 sphere.SetActive(true);
 
                 Vector3 worldAimTarget = mouseWorldPosition;
@@ -59,6 +60,13 @@ namespace Player
                 Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
 
                 transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
+                     if (starterAssetsInputs.shoot)
+                        {
+                            // Tirer à partir de la position de la sphère rouge
+                            Vector3 aimDir = (spherePosition - spawnBulletPosition.position).normalized;
+                            Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
+                            starterAssetsInputs.shoot = false;
+                        }
             }
             else
             {
@@ -67,8 +75,8 @@ namespace Player
                 thirdPersonController.SetRotateOnMove(true);
                 animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 0f, Time.deltaTime * 10f));
 
-                // Désactiver le crosshair et la sphère lorsque le joueur ne vise pas
-                crosshair.SetActive(false);
+                // Désactiver la sphère lorsque le joueur ne vise pas
+              
                 sphere.SetActive(false);
             }
 
@@ -79,6 +87,8 @@ namespace Player
                 Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(forwardDirection, Vector3.up));
                 starterAssetsInputs.shoot = false;
             }
+
+        
         }
     }
 }
