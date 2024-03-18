@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public Button button3;
     public Button button4;
     public Button button5;
+	public GameObject[] uiElements;
 
     void Start()
     {
@@ -24,6 +25,10 @@ public class UIManager : MonoBehaviour
     {
        // lancer le jeu
         Debug.Log("Le a été lancé :) ");
+		foreach (GameObject element in uiElements)
+        {
+            element.SetActive(false);
+        }
     }
 
     void Button2Clicked()
