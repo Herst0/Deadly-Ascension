@@ -23,12 +23,13 @@ public class SpawnOnPoint : MonoBehaviour
     void Update()
     {
         // Permet de faire spawn la pièce en appuyant sur "espace"
+        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SpawnRandomRoom();
         }
+        */
     }
-
     void SpawnRandomRoom()
     {
         for (int i = 0; i < spawnPoints.Length; i++)
