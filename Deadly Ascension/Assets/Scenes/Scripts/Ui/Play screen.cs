@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using Mirror;
+
+public class MainMenu : NetworkBehaviour
+{
+	public void PlayGame()
+	{
+		Application.LoadLevel(1);
+	}
+
+	public void QuitGame()
+	{
+		Application.Quit();	
+	}
+}
