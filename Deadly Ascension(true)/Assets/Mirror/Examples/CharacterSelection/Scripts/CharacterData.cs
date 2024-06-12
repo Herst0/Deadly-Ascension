@@ -1,8 +1,8 @@
 using UnityEngine;
-using Mirror;
+
 namespace Mirror.Examples.CharacterSelection
 {
-    public class CharacterData : NetworkBehaviour
+    public class CharacterData : MonoBehaviour
     {
         // A reference data script for most things character and customisation related.
 
