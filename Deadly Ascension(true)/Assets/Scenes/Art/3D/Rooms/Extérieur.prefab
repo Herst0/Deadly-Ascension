@@ -344,6 +344,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4108989864409368597}
     m_Modifications:
+    - target: {fileID: 922195227607657301, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
+      propertyPath: _assetId
+      value: 2220312920
+      objectReference: {fileID: 0}
     - target: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_Name
       value: Zombie brown-2
@@ -414,6 +418,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4108989864409368597}
     m_Modifications:
+    - target: {fileID: 922195227607657301, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
+      propertyPath: _assetId
+      value: 2220312920
+      objectReference: {fileID: 0}
     - target: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_Name
       value: Zombie brown-1
@@ -617,6 +625,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4108989864409368597}
     m_Modifications:
+    - target: {fileID: 922195227607657301, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
+      propertyPath: _assetId
+      value: 2220312920
+      objectReference: {fileID: 0}
     - target: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_Name
       value: Zombie brown-5
@@ -687,6 +699,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4108989864409368597}
     m_Modifications:
+    - target: {fileID: 922195227607657301, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
+      propertyPath: _assetId
+      value: 2220312920
+      objectReference: {fileID: 0}
     - target: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_Name
       value: Zombie brown-3
@@ -757,6 +773,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4108989864409368597}
     m_Modifications:
+    - target: {fileID: 922195227607657301, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
+      propertyPath: _assetId
+      value: 2220312920
+      objectReference: {fileID: 0}
     - target: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_Name
       value: Zombie brown-4
