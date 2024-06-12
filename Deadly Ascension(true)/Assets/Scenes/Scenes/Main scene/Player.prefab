@@ -18,10 +18,10 @@ GameObject:
   - component: {fileID: 6731078641808873084}
   - component: {fileID: 8593233332653934277}
   - component: {fileID: 5243998062445645767}
-  - component: {fileID: 1137781261197759532}
   - component: {fileID: 8571980905431129813}
   - component: {fileID: 2400535284661383737}
   - component: {fileID: 7438005466812274110}
+  - component: {fileID: -2243815758655812380}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -344,41 +344,6 @@ MonoBehaviour:
   serverOnly: 1
   visibility: 0
   hasSpawned: 0
---- !u!114 &1137781261197759532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976338253132477037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a553cb17010b2403e8523b558bffbc14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncDirection: 1
-  syncMode: 0
-  syncInterval: 0
-  target: {fileID: 4940799936472606708}
-  syncPosition: 1
-  syncRotation: 1
-  syncScale: 0
-  onlySyncOnChange: 1
-  compressRotation: 1
-  interpolatePosition: 1
-  interpolateRotation: 1
-  interpolateScale: 1
-  coordinateSpace: 0
-  sendIntervalMultiplier: 1
-  timelineOffset: 0
-  showGizmos: 0
-  showOverlay: 0
-  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
-  bufferResetMultiplier: 3
-  changedDetection: 1
-  positionSensitivity: 0.01
-  rotationSensitivity: 0.01
-  scaleSensitivity: 0.01
 --- !u!54 &8571980905431129813
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -458,6 +423,41 @@ MonoBehaviour:
   - {fileID: 2966440313962115563}
   - {fileID: 5605313317614616151}
   - {fileID: 5529868867612030640}
+--- !u!114 &-2243815758655812380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976338253132477037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a553cb17010b2403e8523b558bffbc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 4940799936472606708}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  bufferResetMultiplier: 3
+  changedDetection: 1
+  positionSensitivity: 0.01
+  rotationSensitivity: 0.01
+  scaleSensitivity: 0.01
 --- !u!1 &1824549385534615043
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +471,7 @@ GameObject:
   - component: {fileID: 5814976399633464090}
   - component: {fileID: 8801054690538093941}
   - component: {fileID: 2966440313962115563}
+  - component: {fileID: 5761302612246875982}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -486,8 +487,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824549385534615043}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7373971, y: -0, z: -0, w: 0.6754596}
-  m_LocalPosition: {x: 0.16000009, y: 14.636072, z: -9.152949}
+  m_LocalRotation: {x: -0.3091263, y: 0.64013463, z: -0.6290587, w: -0.31456912}
+  m_LocalPosition: {x: 0.16000003, y: 12.917324, z: 0.12348366}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -526,7 +527,7 @@ Camera:
     height: 1
   near clip plane: 0.2
   far clip plane: 500
-  field of view: 40
+  field of view: 60
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -630,6 +631,40 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &5761302612246875982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824549385534615043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 8248277907805131423}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  onlySyncOnChangeCorrectionMultiplier: 2
+  rotationSensitivity: 0.01
+  positionPrecision: 0.01
+  scalePrecision: 0.01
 --- !u!1 &1916195527057589199
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2988638275706697984}
   - component: {fileID: 5605313317614616151}
+  - component: {fileID: 8749226479283363554}
   m_Layer: 0
   m_Name: PlayerFollowCamera
   m_TagString: Untagged
@@ -805,8 +841,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5682490584479087343}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.30912632, y: 0.64013463, z: -0.6290587, w: -0.31456915}
-  m_LocalPosition: {x: 0.16000009, y: 12.917324, z: 0.12348366}
+  m_LocalRotation: {x: -0.3091263, y: 0.64013463, z: -0.6290587, w: -0.31456912}
+  m_LocalPosition: {x: 0.16000003, y: 12.917324, z: 0.12348366}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -852,6 +888,40 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1540095018489253240}
+--- !u!114 &8749226479283363554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5682490584479087343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 2988638275706697984}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  onlySyncOnChangeCorrectionMultiplier: 2
+  rotationSensitivity: 0.01
+  positionPrecision: 0.01
+  scalePrecision: 0.01
 --- !u!1 &7148294158747255514
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8560971087877051755}
   - component: {fileID: 5529868867612030640}
+  - component: {fileID: 6166869256211950297}
   m_Layer: 0
   m_Name: PlayerAimCamera
   m_TagString: Untagged
@@ -878,7 +949,7 @@ Transform:
   m_GameObject: {fileID: 7148294158747255514}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7373971, y: -0, z: -0, w: 0.6754596}
-  m_LocalPosition: {x: 0.16000009, y: 14.636072, z: -9.152949}
+  m_LocalPosition: {x: 0.16000003, y: 14.636072, z: -9.152949}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -924,6 +995,40 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 2471434448620575302}
+--- !u!114 &6166869256211950297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7148294158747255514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 8560971087877051755}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  onlySyncOnChangeCorrectionMultiplier: 2
+  rotationSensitivity: 0.01
+  positionPrecision: 0.01
+  scalePrecision: 0.01
 --- !u!1 &8443095823027621021
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class SceneManager : MonoBehaviour
     void Start()
     {
         // Appelle la méthode UpdateNavMesh toutes les 10 minutes, après un délai initial de 0 secondes.
-        InvokeRepeating("UpdateNavMesh", 0f, 600f);
+        InvokeRepeating("UpdateNavMesh", 1f, 1000000f);
     }
 
     void UpdateNavMesh()
