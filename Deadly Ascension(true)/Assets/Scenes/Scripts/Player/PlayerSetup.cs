@@ -2,7 +2,7 @@ using System;
 using Mirror;
 using UnityEngine;
 
-public class PlayerSetup : NetworkBehaviour
+public class PlayerSetup : MonoBehaviour
 {
     [SerializeField]
     private Behaviour[] componentsToDisable;

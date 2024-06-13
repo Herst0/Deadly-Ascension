@@ -3,7 +3,7 @@ using Mirror;
 
 namespace Player
 {
-	public class BasicRigidBodyPush : NetworkBehaviour
+	public class BasicRigidBodyPush : MonoBehaviour
 	{
 		[Header("Push Settings")]
 		[SerializeField] private LayerMask pushLayersMask;
