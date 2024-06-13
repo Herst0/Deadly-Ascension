@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
 namespace Mirror.Examples.CouchCoop
 {
