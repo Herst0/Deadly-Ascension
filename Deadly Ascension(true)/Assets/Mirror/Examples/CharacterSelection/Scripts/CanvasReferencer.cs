@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Mirror;
 using static Mirror.Examples.CharacterSelection.NetworkManagerCharacterSelection;
 
 namespace Mirror.Examples.CharacterSelection
 { 
-    public class CanvasReferencer : NetworkBehaviour
+    public class CanvasReferencer : MonoBehaviour
     {
         // Make sure to attach these Buttons in the Inspector
         public Button buttonExit, buttonNextCharacter, buttonGo, buttonColour, buttonColourReset;

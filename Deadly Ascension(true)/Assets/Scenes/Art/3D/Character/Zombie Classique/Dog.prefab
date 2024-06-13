@@ -367,11 +367,10 @@ GameObject:
   - component: {fileID: 4269523056051882029}
   - component: {fileID: 6224721944418357574}
   - component: {fileID: 4288560791027129310}
-  - component: {fileID: 3830592014477094913}
-  - component: {fileID: 4910955023806207704}
   - component: {fileID: 6370744780429104910}
-  - component: {fileID: 3873300422989754112}
-  - component: {fileID: 2279443307207614337}
+  - component: {fileID: 5651362868929256656}
+  - component: {fileID: 2650849684732505988}
+  - component: {fileID: 8090136617279723623}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Enemy
@@ -502,41 +501,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3830592014477094913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3948618537115851951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b505fa31c12ec9345a9c0e2b23bd31aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncDirection: 0
-  syncMode: 0
-  syncInterval: 0
-  lookradius: 10
-  health: 0
-  maxHealth: 6
---- !u!114 &4910955023806207704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3948618537115851951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  _assetId: 900044275
-  serverOnly: 1
-  visibility: 0
-  hasSpawned: 0
 --- !u!114 &6370744780429104910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,7 +536,24 @@ MonoBehaviour:
   positionSensitivity: 0.01
   rotationSensitivity: 0.01
   scaleSensitivity: 0.01
---- !u!54 &3873300422989754112
+--- !u!114 &5651362868929256656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3948618537115851951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  _assetId: 900044275
+  serverOnly: 1
+  visibility: 0
+  hasSpawned: 0
+--- !u!54 &2650849684732505988
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -599,7 +580,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2279443307207614337
+--- !u!114 &8090136617279723623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
