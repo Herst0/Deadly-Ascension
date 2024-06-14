@@ -1,48 +1,54 @@
-using System;
-using Enemy;
 using UnityEngine;
 using Mirror;
 
-namespace Bullet
+public class BulletProjectile : NetworkBehaviour
 {
-    public class BulletProjectile : NetworkBehaviour
+    [SerializeField] private Transform vfxHitGreen;
+    [SerializeField] private Transform vfxHitRed;
+
+    private Rigidbody bulletRigidbody;
+    private float damage = 1f;
+
+    public void Awake()
     {
-        [SerializeField] private Transform vfxHitGreen;
-        [SerializeField] private Transform vfxHitRed;
+        bulletRigidbody = GetComponent<Rigidbody>();
+    }
 
-        public Rigidbody bulletRigidbody;
+    public void Start()
+    {
+        float speed = 30f;
+        bulletRigidbody.velocity = transform.forward * speed;
+    }
 
-        public void Awake()
+    public void OnTriggerEnter(Collider other)
+    {
+        if (!isServer)
+            return;
+
+        if (other.GetComponent<BulletTarget>() != null)
         {
-            bulletRigidbody = GetComponent<Rigidbody>();
-        }
+            // Instantiate green hit VFX on all clients
+            Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
 
-        public void Start()
-        {
-            float speed = 30f;
-            bulletRigidbody.velocity = transform.forward * speed;
-        }
-
-        public void OnTriggerEnter(Collider other)
-        {
-            
-            if (other.GetComponent<BulletTarget>()!=null)
+            /*Enemies enemy = other.GetComponent<Enemies>();
+            if (enemy != null)
             {
-                Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
-
-                Enemies enemy = other.GetComponent<Enemies>();
-                if (enemy != null)
-                {
-                    enemy.TakeDamage(1);
-                }
-
-            }
-            else
-            {
-                Instantiate(vfxHitRed, transform.position, Quaternion.identity);
-            }
-            Destroy(gameObject);
+                enemy.TakeDamage(damage);
+            }*/
         }
-        
+        else
+        {
+            // Instantiate red hit VFX on all clients
+            Instantiate(vfxHitRed, transform.position, Quaternion.identity);
+        }
+
+        // Destroy the bullet on all clients
+        NetworkServer.Destroy(gameObject);
+    }
+
+    // Method to set the damage of the bullet
+    public void SetDamage(float newDamage)
+    {
+        damage = newDamage;
     }
 }

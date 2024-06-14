@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6250807048224175873}
   - component: {fileID: 4267233970344168958}
   - component: {fileID: -3309847333957516579}
+  - component: {fileID: -1025140769588437565}
   m_Layer: 0
   m_Name: pfBulletProjectile
   m_TagString: Untagged
@@ -101,7 +102,7 @@ MonoBehaviour:
   syncInterval: 0
   vfxHitGreen: {fileID: 1550503277990743736, guid: c074cc90e58139046a66d4897b327fee, type: 3}
   vfxHitRed: {fileID: 6894908368207602050, guid: fbd13a96b67814f43b5c9b191ecfd50a, type: 3}
-  bulletRigidbody: {fileID: 0}
+  bulletRigidbody: {fileID: 2846026498045258826}
 --- !u!114 &-3309847333957516579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +120,40 @@ MonoBehaviour:
   serverOnly: 0
   visibility: 0
   hasSpawned: 0
+--- !u!114 &-1025140769588437565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4309894209080436077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 997478795059004409}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  onlySyncOnChangeCorrectionMultiplier: 2
+  rotationSensitivity: 0.01
+  positionPrecision: 0.01
+  scalePrecision: 0.01
 --- !u!1 &4851576994542380038
 GameObject:
   m_ObjectHideFlags: 0

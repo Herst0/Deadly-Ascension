@@ -4,7 +4,7 @@ public class PlayerLookAtMouse : MonoBehaviour
 {
     public Camera mainCamera;        // Référence à la caméra principale
     public float sensitivity = 1.0f; // Facteur de sensibilité de la rotation
-    public float rotationThreshold = 0.2f; // Seuil de mouvement de la souris pour la rotation
+    public float rotationThreshold = 0.1f; // Seuil de mouvement de la souris pour la rotation
 
     void Update()
     {
@@ -32,4 +32,5 @@ public class PlayerLookAtMouse : MonoBehaviour
             }
         }
     }
+    
 }

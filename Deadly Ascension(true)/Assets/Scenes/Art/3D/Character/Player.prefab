@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 3286400935894741309}
   - component: {fileID: 2742452178088753322}
   - component: {fileID: 8704876416318926151}
-  - component: {fileID: 6731078641808873084}
   - component: {fileID: -2639378162507821268}
   m_Layer: 8
   m_Name: Player
@@ -139,7 +138,7 @@ MonoBehaviour:
   syncInterval: 0
   componentsToDisable:
   - {fileID: 8593233332653934277}
-  - {fileID: 6731078641808873084}
+  - {fileID: 0}
   - {fileID: 2742452178088753322}
   - {fileID: 117541770594481592}
   - {fileID: 42649221048566155}
@@ -424,31 +423,6 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
---- !u!114 &6731078641808873084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976338253132477037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b60d7b0ad3bb1974090105b77819488f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncDirection: 0
-  syncMode: 0
-  syncInterval: 0
-  aimVirtualCamera: {fileID: 5529868867612030640}
-  sphere: {fileID: 2988275699751966090, guid: 4b02d73583c936141897c04df4866c67, type: 3}
-  normalSensitivity: 2
-  aimSensitivity: 0.5
-  aimColliderLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  debugTransform: {fileID: 5019050321219290314, guid: 4b02d73583c936141897c04df4866c67, type: 3}
-  pfBulletProjectile: {fileID: 997478795059004409, guid: dd3070f8ef7d38c46b97e06500c9ab2c, type: 3}
-  spawnBulletPosition: {fileID: 2949923935668702336}
 --- !u!114 &-2639378162507821268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 0
-  _assetId: 2290868456
+  _assetId: 0
   serverOnly: 0
   visibility: 0
   hasSpawned: 0
@@ -1212,10 +1186,5 @@ PrefabInstance:
 --- !u!4 &1060864017032036426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1993859284058247635, guid: df7bce1ae0f602945b80d4cbcb412cbc, type: 3}
-  m_PrefabInstance: {fileID: 1518678753198756249}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2949923935668702336 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4459498728015584537, guid: df7bce1ae0f602945b80d4cbcb412cbc, type: 3}
   m_PrefabInstance: {fileID: 1518678753198756249}
   m_PrefabAsset: {fileID: 0}

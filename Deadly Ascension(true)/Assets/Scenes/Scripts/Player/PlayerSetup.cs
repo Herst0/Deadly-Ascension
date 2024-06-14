@@ -6,35 +6,30 @@ public class PlayerSetup : NetworkBehaviour
 {
     [SerializeField]
     private Behaviour[] componentsToDisable;
+    [SerializeField]
+    private string remoteLayerName = "RemotePlayer";
 
     private void Start()
     {
         if (!isLocalPlayer)
         {
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-            for (int i = 0; i < componentsToDisable.Length; i++)
-            {
-                 componentsToDisable[i].enabled = false;
-            }
-            
+            DisableComponents();
+            AssignRemoteLayer(); //le mettre sur les ennemy
         }
-        else
-        {
-            Camera.main.gameObject.SetActive(false);
-        }
-=======
->>>>>>> Stashed changes
-             for (int i = 0; i < componentsToDisable.Length; i++)
-             {
-                componentsToDisable[i].enabled = false;
-            }
-            
-        }
-<<<<<<< Updated upstream
-=======
->>>>>>> 152a1be6fe9b4796a24c82db8a820e109e3a0b27
->>>>>>> Stashed changes
+       
+        
     }
+    private void AssignRemoteLayer()
+    {
+        gameObject.layer = LayerMask.NameToLayer(remoteLayerName);
+    }
+    private void DisableComponents()
+    {
+        // On va boucler sur les différents composants renseignés et les désactiver si ce joueur n'est pas le notre
+        for (int i = 0; i < componentsToDisable.Length; i++)
+        {
+            componentsToDisable[i].enabled = false;
+        }
+    }
+    
 }
