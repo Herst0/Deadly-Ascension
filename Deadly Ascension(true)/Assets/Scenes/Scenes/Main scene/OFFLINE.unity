@@ -1693,63 +1693,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.12159926, y: 3.370418, z: 11.003269}
   m_Center: {x: -0.43920037, y: 0.27917165, z: -2.9294033}
---- !u!1001 &83716026
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2069116410888822461, guid: 97acbea6c711a2745ab2eac1b33bb8af, type: 3}
-      propertyPath: m_Name
-      value: Room1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397324129803906280, guid: 97acbea6c711a2745ab2eac1b33bb8af, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 76.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397324129803906280, guid: 97acbea6c711a2745ab2eac1b33bb8af, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.4069861
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397324129803906280, guid: 97acbea6c711a2745ab2eac1b33bb8af, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -11.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397324129803906280, guid: 97acbea6c711a2745ab2eac1b33bb8af, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7258838
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397324129803906280, guid: 97acbea6c711a2745ab2eac1b33bb8af, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397324129803906280, guid: 97acbea6c711a2745ab2eac1b33bb8af, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.6878174
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397324129803906280, guid: 97acbea6c711a2745ab2eac1b33bb8af, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397324129803906280, guid: 97acbea6c711a2745ab2eac1b33bb8af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397324129803906280, guid: 97acbea6c711a2745ab2eac1b33bb8af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -86.915
-      objectReference: {fileID: 0}
-    - target: {fileID: 5397324129803906280, guid: 97acbea6c711a2745ab2eac1b33bb8af, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 97acbea6c711a2745ab2eac1b33bb8af, type: 3}
 --- !u!1 &97035845
 GameObject:
   m_ObjectHideFlags: 0
@@ -7315,6 +7258,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zomb1: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
   zomb2: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
+  zomb3: {fileID: 3948618537115851951, guid: 1c6cd783334580c4d9611180ec101c29, type: 3}
+  zomb4: {fileID: 919132149155446097, guid: cadadb5858f08f84495e8be932ba85be, type: 3}
+  zomb5: {fileID: 919132149155446097, guid: c1a46d3279b4c6045afb7a5d454886cc, type: 3}
   ZoneSize: {x: 23.3, y: 1.29, z: 21.3}
 --- !u!4 &573930419 stripped
 Transform:
@@ -10874,6 +10820,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zomb1: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
   zomb2: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
+  zomb3: {fileID: 3948618537115851951, guid: 1c6cd783334580c4d9611180ec101c29, type: 3}
+  zomb4: {fileID: 919132149155446097, guid: c1a46d3279b4c6045afb7a5d454886cc, type: 3}
+  zomb5: {fileID: 919132149155446097, guid: cadadb5858f08f84495e8be932ba85be, type: 3}
   ZoneSize: {x: 23.3, y: 1.29, z: 21.3}
 --- !u!1001 &796011135
 PrefabInstance:
@@ -20282,6 +20231,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zomb1: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
   zomb2: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
+  zomb3: {fileID: 3948618537115851951, guid: 1c6cd783334580c4d9611180ec101c29, type: 3}
+  zomb4: {fileID: 919132149155446097, guid: c1a46d3279b4c6045afb7a5d454886cc, type: 3}
+  zomb5: {fileID: 919132149155446097, guid: cadadb5858f08f84495e8be932ba85be, type: 3}
   ZoneSize: {x: 23.3, y: 1.29, z: 21.3}
 --- !u!1 &1446205434
 GameObject:
@@ -28999,7 +28951,6 @@ SceneRoots:
   - {fileID: 1619517038}
   - {fileID: 1934312944}
   - {fileID: 2774700649342955493}
-  - {fileID: 83716026}
   - {fileID: 1809220410}
   - {fileID: 1497780230}
   - {fileID: 825470034124451473}
