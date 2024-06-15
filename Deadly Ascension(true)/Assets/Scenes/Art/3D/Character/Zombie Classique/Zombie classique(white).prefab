@@ -704,9 +704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8bd835cf5d54924b9bc3e9187b04112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncDirection: 0
-  syncMode: 0
-  syncInterval: 0
 --- !u!143 &3402019752023857712
 CharacterController:
   m_ObjectHideFlags: 0
@@ -743,7 +740,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -811,11 +808,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b505fa31c12ec9345a9c0e2b23bd31aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncDirection: 0
-  syncMode: 0
-  syncInterval: 0
   lookradius: 10
-  health: 0
+  heath: 0
   maxHealth: 6
 --- !u!1 &7240611458721630064
 GameObject:
