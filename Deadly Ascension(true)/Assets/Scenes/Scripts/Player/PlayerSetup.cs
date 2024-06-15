@@ -16,17 +16,9 @@ public class PlayerSetup : NetworkBehaviour
             DisableComponents();
             AssignRemoteLayer(); //le mettre sur les ennemy
         }
-
-        RegisterPlayer();
+       
+        
     }
-
-    private void RegisterPlayer()
-    {
-        //change nom du joueur par un identifiant unique -> plus simple à identifier
-        string playername =  "Player"+GetComponent<NetworkIdentity>().netId;
-        transform.name = playername;
-    }
-    
     private void AssignRemoteLayer()
     {
         gameObject.layer = LayerMask.NameToLayer(remoteLayerName);
@@ -39,6 +31,5 @@ public class PlayerSetup : NetworkBehaviour
             componentsToDisable[i].enabled = false;
         }
     }
-    
     
 }
