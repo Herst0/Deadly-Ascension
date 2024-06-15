@@ -1,44 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class PlayerTakeDamage : NetworkBehaviour
+public class PlayerTakeDamage : MonoBehaviour
 {
-    [SyncVar] private float health;
-    [SerializeField] private float maxHealth = 20f;
+    [SerializeField] private float heath, maxHealth = 20f;
 
-    public override void OnStartServer()
+    public void Start()
     {
-        health = maxHealth;
+
+        heath = maxHealth;
     }
 
-    [Server]
     public void TakeDamage(float damage)
     {
-        Debug.Log("TakeDamage called with damage: " + damage);
-        health -= damage;
-        if (health <= 0)
-        {
-            RpcHandleDeath();
-            // Ajouter animation de mort
-        }
-    }
-
-    [ClientRpc]
-    void RpcHandleDeath()
-    {
-        Debug.Log("RpcHandleDeath called, destroying player.");
-        Destroy(gameObject);
-    }
-    public void TakeDamage(int amount)
-    {
-        if (!isServer) return;  // Seul le serveur gère les dégâts
-
-        health -= amount;
-        if (health <= 0)
+        heath -= damage;
+        if (heath <= 0)
         {
             Destroy(gameObject);
+            //mettre animation de mort
         }
     }
 

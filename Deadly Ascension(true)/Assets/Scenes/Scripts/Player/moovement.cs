@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class moove : NetworkBehaviour
+public class moove : MonoBehaviour
 {
     public float speed = 6f;
     public float gravity = 20f;

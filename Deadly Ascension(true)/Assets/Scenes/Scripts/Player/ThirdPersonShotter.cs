@@ -2,11 +2,10 @@ using Cinemachine;
 using StarterAssets;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Mirror;
 
 namespace Player
 {
-    public class ThirdPersonShooter : NetworkBehaviour
+    public class ThirdPersonShooter : MonoBehaviour
     {
         [SerializeField] private CinemachineVirtualCamera aimVirtualCamera;
         [SerializeField] private GameObject sphere;

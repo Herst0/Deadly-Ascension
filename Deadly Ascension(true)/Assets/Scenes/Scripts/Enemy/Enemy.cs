@@ -2,96 +2,59 @@ using System;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
-using Mirror;
+using Random = UnityEngine.Random;
 
 namespace Enemy
 {
-    public class Enemies : NetworkBehaviour
+    public class Enemies : MonoBehaviour
     {
+        // public int enemyHP = 100;
         public float lookradius = 10f;
+        private Transform target;
         private NavMeshAgent agent;
         private Animator enemy;
-        [SerializeField] private float health, maxHealth = 6f;
-        private Vector3 lastPlayerPosition;
-        private bool playerIsMoving = false;
-
-        private Transform target;
+        [SerializeField] private float heath, maxHealth = 6f;
+        private Vector3 lastPlayerPosition; // Dernière position connue du joueur
+        private bool playerIsMoving = false; // Indique si le joueur est en mouvement
 
         private void Start()
         {
+            target = PlayerManager.instance.player.transform;
             agent = GetComponent<NavMeshAgent>();
             enemy = GetComponent<Animator>();
-            health = maxHealth;
-        }
-
-        private void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                PlayerTakeDamage damageable = collision.gameObject.GetComponent<PlayerTakeDamage>();
-                if (damageable != null)
-                {
-                    damageable.TakeDamage(1);
-                }
-            }
+            heath = maxHealth;
+            lastPlayerPosition = target.position;
         }
 
         private void Update()
         {
-            if (!isServer) return;
-
-            FindClosestPlayer();
-
-            if (target != null)
+            float distance = Vector3.Distance(target.position, transform.position);
+            if (distance <= lookradius)
             {
-                float distance = Vector3.Distance(target.position, transform.position);
-                if (distance <= lookradius)
-                {
-                    enemy.SetBool("see player", true);
-                    agent.SetDestination(target.position);
+                enemy.SetBool("see player", true);
+                agent.SetDestination(target.position);
 
-                    if (distance <= agent.stoppingDistance)
-                    {
-                        FaceTarget();
-                    }
-                }
-                else
+                if (distance <= agent.stoppingDistance)
                 {
-                    enemy.SetBool("see player", false);
-                    target = null;
-                }
-
-                if (target.position != lastPlayerPosition)
-                {
-                    playerIsMoving = true;
-                    lastPlayerPosition = target.position;
-                }
-                else
-                {
-                    playerIsMoving = false;
+                    FaceTarget(); //faire face au player
                 }
             }
-        }
-
-        void FindClosestPlayer()
-        {
-            float closestDistance = lookradius;
-            target = null;
-            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-            foreach (GameObject player in players)
+            else
             {
-                float distance = Vector3.Distance(player.transform.position, transform.position);
-                if (distance <= closestDistance)
-                {
-                    target = player.transform;
-                    closestDistance = distance;
-                }
+                enemy.SetBool("see player", false);
+            }
+            if (target.position != lastPlayerPosition)
+            {
+                playerIsMoving = true;
+                lastPlayerPosition = target.position;
+            }
+            else
+            {
+                playerIsMoving = false;
             }
         }
-
         void FaceTarget()
         {
-            if (target == null) return;
             Vector3 direction = (target.position - transform.position).normalized;
             Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
@@ -105,57 +68,47 @@ namespace Enemy
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Enemy collided with: " + other.gameObject.name);
-            if (other.CompareTag("Player"))
+            if (other.CompareTag("Player")) // Vérifie si le collider qui entre en collision est celui du joueur
             {
-             
-                    CmdAttack(other.gameObject);
-                
+                Attack(); // Lance l'attaque si le joueur entre en collision avec l'ennemi
             }
         }
 
-
-        [Command]
-        void CmdAttack(GameObject playerObj)
+        void Attack()
         {
-            Debug.Log("CmdAttack called on: " + playerObj.name);
-            RpcAttack(playerObj);
-        }
-
-        [ClientRpc]
-        void RpcAttack(GameObject playerObj)
-        {
-            Debug.Log("RpcAttack called on: " + playerObj.name);
-            PlayerTakeDamage player = playerObj.GetComponent<PlayerTakeDamage>();
+            // Ici, vous pouvez mettre le code pour infliger des dégâts au joueur
+            PlayerTakeDamage player = target.GetComponent<PlayerTakeDamage>();
             if (player != null)
             {
-                Debug.Log("PlayerTakeDamage component found on: " + playerObj.name);
                 player.TakeDamage(1);
-                StartCoroutine(CheckPlayerMovement(player));
+                StartCoroutine(CheckPlayerMovement());
             }
         }
 
-        IEnumerator CheckPlayerMovement(PlayerTakeDamage player)
+        IEnumerator CheckPlayerMovement()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1f); // Attendre 1 seconde
 
             if (!playerIsMoving)
             {
+                PlayerTakeDamage player = target.GetComponent<PlayerTakeDamage>();
                 if (player != null)
                 {
-                    player.TakeDamage(1);
-                    StartCoroutine(CheckPlayerMovement(player));
+                    player.TakeDamage(1); // Infliger des dégâts supplémentaires
+                    StartCoroutine(CheckPlayerMovement());
                 }
+
+         
             }
         }
 
         public void TakeDamage(float damage)
         {
-            health -= damage;
-            if (health <= 0)
+            heath -= damage;
+            if (heath <= 0)
             {
                 Destroy(gameObject);
-                // Ajouter animation de mort
+                //mettre animation de mort
             }
         }
     }
