@@ -36,4 +36,6 @@ public class PlayerShoot : NetworkBehaviour
         // Spawn the bullet for connected clients
         NetworkServer.Spawn(bullet);
     }
+
+    
 }

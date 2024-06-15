@@ -1,3 +1,4 @@
+using Enemy;
 using UnityEngine;
 using Mirror;
 
@@ -30,11 +31,11 @@ public class BulletProjectile : NetworkBehaviour
             // Instantiate green hit VFX on all clients
             Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
 
-            /*Enemies enemy = other.GetComponent<Enemies>();
+            Enemies enemy = other.GetComponent<Enemies>();
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);
-            }*/
+            }
         }
         else
         {

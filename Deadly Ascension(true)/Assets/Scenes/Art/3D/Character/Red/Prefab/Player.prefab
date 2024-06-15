@@ -204,6 +204,7 @@ MonoBehaviour:
   - {fileID: 2126023305165502178}
   - {fileID: 7614088317182472221}
   - {fileID: 1944839708227415867}
+  - {fileID: 0}
   remoteLayerName: RemotePlayer
 --- !u!114 &1944839708227415867
 MonoBehaviour:
@@ -220,10 +221,6 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  cam: {fileID: 7614088317182472221}
-  mask:
-    serializedVersion: 2
-    m_Bits: 8
   bulletPrefab: {fileID: 4309894209080436077, guid: dd3070f8ef7d38c46b97e06500c9ab2c, type: 3}
   spawnPoint: {fileID: 1723773625678259915}
   weapon:
