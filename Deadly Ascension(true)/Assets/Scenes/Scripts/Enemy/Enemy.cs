@@ -109,7 +109,7 @@ namespace Enemy
             heath -= damage;
             if (heath <= 0)
             {
-                Instantiate(xp, transform.position, transform.rotation);
+                Instantiate(xp, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 //mettre animation de mort
             }
