@@ -31,31 +31,30 @@ namespace Enemy
         private void Update()
         {
             float distance = Vector3.Distance(target.position, transform.position);
-            
+           
                 if (distance <= lookradius)
-                            {
-                                enemy.SetBool("see player", true);
-                                agent.SetDestination(target.position);
-                
-                                if (distance <= agent.stoppingDistance)
-                                {
-                                    FaceTarget(); //faire face au player
-                                }
-                            }
-                            else
-                            {
-                                enemy.SetBool("see player", false);
-                            }
-                            if (target.position != lastPlayerPosition)
-                            {
-                                playerIsMoving = true;
-                                lastPlayerPosition = target.position;
-                            }
-                            else
-                            {
-                                playerIsMoving = false;
-                            }
-            
+                {
+                    enemy.SetBool("see player", true);
+                    agent.SetDestination(target.position);
+                    
+                    if (distance <= agent.stoppingDistance)
+                    {
+                        FaceTarget(); //faire face au player
+                    }
+                }
+                else
+                {
+                    enemy.SetBool("see player", false);
+                }
+                if (target.position != lastPlayerPosition)
+                {
+                    playerIsMoving = true;
+                    lastPlayerPosition = target.position;
+                }
+                else
+                {
+                    playerIsMoving = false;
+                }
         }
         void FaceTarget()
         {
