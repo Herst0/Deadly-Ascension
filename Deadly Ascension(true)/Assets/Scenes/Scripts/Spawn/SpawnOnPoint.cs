@@ -16,6 +16,9 @@ public class SpawnOnPoint : NetworkBehaviour
     private GameObject Room4;
 
     [SerializeField]
+    private GameObject Room5;
+
+    [SerializeField]
     private Transform[] spawnPoints;
 
     void Start()
@@ -40,12 +43,12 @@ public class SpawnOnPoint : NetworkBehaviour
         for (int i = 0; i < spawnPoints.Length; i++)
         {
             Quaternion rotation = Quaternion.identity; // Initialiser la rotation à l'identité
-            
-            // Choisir aléatoirement entre Room1, Room2, Room3, et Room4
-            int randomIndex = Random.Range(0, 4);
+            // Choisir aléatoirement entre Room1, Room2, Room3, Room4, et Room5
+            int randomIndex = Random.Range(0, 5);
             GameObject selectedRoom = (randomIndex == 0) ? Room1 : 
                 (randomIndex == 1) ? Room2 : 
-                (randomIndex == 2) ? Room3 : Room4;
+                (randomIndex == 2) ? Room3 : 
+                (randomIndex == 3) ? Room4 : Room5;
 
             // Appliquer la rotation de 90 degrés autour de l'axe Y pour les indices 0 et 2
             if (i == 0 || i == 2)
