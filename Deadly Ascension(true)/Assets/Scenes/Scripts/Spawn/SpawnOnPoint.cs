@@ -1,5 +1,6 @@
 using UnityEngine;
 using Mirror;
+
 public class SpawnOnPoint : NetworkBehaviour
 {
     [SerializeField]
@@ -10,13 +11,16 @@ public class SpawnOnPoint : NetworkBehaviour
 
     [SerializeField]
     private GameObject Room3;
+    
+    [SerializeField]
+    private GameObject Room4;
 
     [SerializeField]
     private Transform[] spawnPoints;
 
     void Start()
     {
-        // Je ne sais pas ci cela ne les fait pas spawn deux fois au même endroit ?
+        // Je ne sais pas si cela ne les fait pas spawn deux fois au même endroit ?
         SpawnRandomRoom();
     }
 
@@ -30,23 +34,26 @@ public class SpawnOnPoint : NetworkBehaviour
         }
         */
     }
+
     void SpawnRandomRoom()
     {
         for (int i = 0; i < spawnPoints.Length; i++)
         {
             Quaternion rotation = Quaternion.identity; // Initialiser la rotation à l'identité
             
-            // Choisir aléatoirement entre Room1, Room2, et Room3
-            int randomIndex = Random.Range(0, 3);
-            GameObject selectedRoom = (randomIndex == 0) ? Room1 : (randomIndex == 1) ? Room2 : Room3;
+            // Choisir aléatoirement entre Room1, Room2, Room3, et Room4
+            int randomIndex = Random.Range(0, 4);
+            GameObject selectedRoom = (randomIndex == 0) ? Room1 : 
+                (randomIndex == 1) ? Room2 : 
+                (randomIndex == 2) ? Room3 : Room4;
 
-            // Appliquer la rotation de -90 degrés autour de l'axe Y pour les indices 2 et 4
+            // Appliquer la rotation de 90 degrés autour de l'axe Y pour les indices 0 et 2
             if (i == 0 || i == 2)
             {
                 rotation = Quaternion.Euler(0, 90, 0);
             }
             
-            // Appliquer la rotation de 90 degrés autour de l'axe Y pour les indices 2 et 4
+            // Appliquer la rotation de -90 degrés autour de l'axe Y pour les indices 1 et 3
             if (i == 1 || i == 3)
             {
                 rotation = Quaternion.Euler(0, -90, 0);
