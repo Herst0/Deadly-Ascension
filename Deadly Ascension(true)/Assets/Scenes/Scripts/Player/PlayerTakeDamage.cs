@@ -8,7 +8,6 @@ public class PlayerTakeDamage : MonoBehaviour
 
     public void Start()
     {
-
         heath = maxHealth;
     }
 
@@ -18,7 +17,7 @@ public class PlayerTakeDamage : MonoBehaviour
         if (heath <= 0)
         {
             Destroy(gameObject);
-            //mettre animation de mort
+            //mort du perso à intégrer
         }
     }
 

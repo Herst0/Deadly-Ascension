@@ -17,6 +17,8 @@ namespace Enemy
         private Vector3 lastPlayerPosition; // Dernière position connue du joueur
         private bool playerIsMoving = false; // Indique si le joueur est en mouvement
 
+        public GameObject xp;
+ 
         private void Start()
         {
             target = PlayerManager.instance.player.transform;
@@ -101,12 +103,13 @@ namespace Enemy
          
             }
         }
-
+ 
         public void TakeDamage(float damage)
         {
             heath -= damage;
             if (heath <= 0)
             {
+                Instantiate(xp, transform.position, transform.rotation);
                 Destroy(gameObject);
                 //mettre animation de mort
             }
