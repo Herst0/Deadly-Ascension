@@ -9022,8 +9022,8 @@ MonoBehaviour:
   zomb1: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
   zomb2: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
   zomb3: {fileID: 3948618537115851951, guid: 1c6cd783334580c4d9611180ec101c29, type: 3}
-  zomb4: {fileID: 919132149155446097, guid: cadadb5858f08f84495e8be932ba85be, type: 3}
-  zomb5: {fileID: 919132149155446097, guid: c1a46d3279b4c6045afb7a5d454886cc, type: 3}
+  zomb4: {fileID: 4194638187385576104, guid: ac7a3c2c79eae78409f38f02861ef430, type: 3}
+  zomb5: {fileID: 6884252627791544349, guid: 580dd76d93756214ea4fbbdc59ef98de, type: 3}
   ZoneSize: {x: 18.1, y: 1.61, z: 21.4}
 --- !u!1 &571650313
 GameObject:
@@ -9072,8 +9072,8 @@ MonoBehaviour:
   zomb1: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
   zomb2: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
   zomb3: {fileID: 3948618537115851951, guid: 1c6cd783334580c4d9611180ec101c29, type: 3}
-  zomb4: {fileID: 919132149155446097, guid: cadadb5858f08f84495e8be932ba85be, type: 3}
-  zomb5: {fileID: 919132149155446097, guid: c1a46d3279b4c6045afb7a5d454886cc, type: 3}
+  zomb4: {fileID: 6884252627791544349, guid: 580dd76d93756214ea4fbbdc59ef98de, type: 3}
+  zomb5: {fileID: 4194638187385576104, guid: ac7a3c2c79eae78409f38f02861ef430, type: 3}
   ZoneSize: {x: 23.3, y: 1.29, z: 21.3}
 --- !u!1 &573533225
 GameObject:
@@ -11637,8 +11637,8 @@ MonoBehaviour:
   zomb1: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
   zomb2: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
   zomb3: {fileID: 3948618537115851951, guid: 1c6cd783334580c4d9611180ec101c29, type: 3}
-  zomb4: {fileID: 919132149155446097, guid: cadadb5858f08f84495e8be932ba85be, type: 3}
-  zomb5: {fileID: 919132149155446097, guid: c1a46d3279b4c6045afb7a5d454886cc, type: 3}
+  zomb4: {fileID: 4194638187385576104, guid: ac7a3c2c79eae78409f38f02861ef430, type: 3}
+  zomb5: {fileID: 6884252627791544349, guid: 580dd76d93756214ea4fbbdc59ef98de, type: 3}
   ZoneSize: {x: 7.7, y: 1.28, z: 17.9}
 --- !u!1 &735687609
 GameObject:
@@ -13566,8 +13566,8 @@ MonoBehaviour:
   zomb1: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
   zomb2: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
   zomb3: {fileID: 3948618537115851951, guid: 1c6cd783334580c4d9611180ec101c29, type: 3}
-  zomb4: {fileID: 919132149155446097, guid: c1a46d3279b4c6045afb7a5d454886cc, type: 3}
-  zomb5: {fileID: 919132149155446097, guid: cadadb5858f08f84495e8be932ba85be, type: 3}
+  zomb4: {fileID: 6884252627791544349, guid: 580dd76d93756214ea4fbbdc59ef98de, type: 3}
+  zomb5: {fileID: 4194638187385576104, guid: ac7a3c2c79eae78409f38f02861ef430, type: 3}
   ZoneSize: {x: 23.3, y: 1.29, z: 21.3}
 --- !u!1001 &796536625
 PrefabInstance:
@@ -25369,8 +25369,8 @@ MonoBehaviour:
   zomb1: {fileID: 2863613874001884131, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
   zomb2: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
   zomb3: {fileID: 3948618537115851951, guid: 1c6cd783334580c4d9611180ec101c29, type: 3}
-  zomb4: {fileID: 919132149155446097, guid: c1a46d3279b4c6045afb7a5d454886cc, type: 3}
-  zomb5: {fileID: 919132149155446097, guid: cadadb5858f08f84495e8be932ba85be, type: 3}
+  zomb4: {fileID: 6884252627791544349, guid: 580dd76d93756214ea4fbbdc59ef98de, type: 3}
+  zomb5: {fileID: 4194638187385576104, guid: ac7a3c2c79eae78409f38f02861ef430, type: 3}
   ZoneSize: {x: 23.3, y: 1.29, z: 21.3}
 --- !u!1 &1446205434
 GameObject:
