@@ -104,6 +104,7 @@ MonoBehaviour:
   lookradius: 12
   heath: 0
   maxHealth: 3
+  xp: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
 --- !u!136 &5357603196103099208
 CapsuleCollider:
   m_ObjectHideFlags: 0

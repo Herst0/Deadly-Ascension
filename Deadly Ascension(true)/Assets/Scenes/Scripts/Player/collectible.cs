@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class collectible : MonoBehaviour
 {
-    private int player;
+    private PlayerTakeDamage player;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +21,8 @@ public class collectible : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            player = GameObject.Find("Player").GetComponent<int>();
-            player += 1;
+            player = GameObject.Find("Player").GetComponent<PlayerTakeDamage>();
+            player._money += 1;
             Destroy(other);
         }
 
