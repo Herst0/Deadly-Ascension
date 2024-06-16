@@ -1,4 +1,3 @@
-using System;
 using Enemy;
 using UnityEngine;
 
@@ -8,6 +7,7 @@ namespace Bullet
     {
         [SerializeField] private Transform vfxHitGreen;
         [SerializeField] private Transform vfxHitRed;
+
 
         public Rigidbody bulletRigidbody;
 
@@ -46,6 +46,7 @@ namespace Bullet
             {
                 Instantiate(vfxHitRed, transform.position, Quaternion.identity);
             }
+
             Destroy(gameObject);
         }
     }
