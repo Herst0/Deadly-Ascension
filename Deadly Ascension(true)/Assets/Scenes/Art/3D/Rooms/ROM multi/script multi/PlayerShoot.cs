@@ -1,23 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
 public class PlayerShoot : NetworkBehaviour
 {
     public PlayerWeapon weapon;
-    
-    [SerializeField]
+    [SerializeField] 
     private Camera cam;
-    
-    [SerializeField]
-    private LayerMask mask;
-    
-    [SerializeField]
-    private GameObject bulletPrefab; // Référence à la prefab de balle
-    [SerializeField]
-    private Transform bulletSpawn; // Position de spawn de la balle
 
+    [SerializeField] private LayerMask mask;
+    
     void Start()
     {
         if (cam == null)
@@ -26,7 +17,6 @@ public class PlayerShoot : NetworkBehaviour
             this.enabled = false;
         }
     }
-
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -38,30 +28,16 @@ public class PlayerShoot : NetworkBehaviour
     [Client]
     private void Shoot()
     {
-        CmdShoot();
-
         RaycastHit hit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, weapon.range, mask))
         {
+            Debug.Log("Objet touch"+hit.collider.name);
             if(hit.collider.tag == "Player")
             {
                 CmdPlayerShot(hit.collider.name, weapon.damage);
             }
         }
-    }
-
-    [Command]
-    private void CmdShoot()
-    {
-        RpcShoot();
-    }
-
-    [ClientRpc]
-    private void RpcShoot()
-    {
-        GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = bulletSpawn.forward * weapon.bulletSpeed;
-        NetworkServer.Spawn(bullet);
+        
     }
 
     [Command]
@@ -69,6 +45,9 @@ public class PlayerShoot : NetworkBehaviour
     {
         Debug.Log(playerId + " a été touché.");
         PlayerMulti player = GameManager.GetPlayer(playerId);
-        player.RpcTakeDamage(damage);
+        player.RcpTakeDamage(damage);
+
     }
+
+
 }

@@ -964,11 +964,10 @@ GameObject:
   - component: {fileID: 132839632110807558}
   - component: {fileID: 4581987568505182378}
   - component: {fileID: 3978242318339223660}
-  - component: {fileID: 470116283159654915}
-  - component: {fileID: 1420858418539148211}
-  - component: {fileID: 8292248615556619031}
-  - component: {fileID: 6709210876627342642}
   - component: {fileID: 2688518149354107498}
+  - component: {fileID: 1932139804755883943}
+  - component: {fileID: 6143752915284535182}
+  - component: {fileID: 8221406099686664092}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1059,7 +1058,7 @@ MonoBehaviour:
   - {fileID: 6843338959155660695}
   - {fileID: 6942739388234559302}
   - {fileID: 5458165490684985809}
-  - {fileID: 470116283159654915}
+  - {fileID: 1932139804755883943}
   remoteLayerName: RemotePlayer
 --- !u!114 &3978242318339223660
 MonoBehaviour:
@@ -1095,84 +1094,6 @@ MonoBehaviour:
   rotationSensitivity: 0.01
   positionPrecision: 0.01
   scalePrecision: 0.01
---- !u!114 &470116283159654915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8270388966021528386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 461ad5ddbf9f91c4b86d658a2db299fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncDirection: 0
-  syncMode: 0
-  syncInterval: 0
-  weapon:
-    name: Pistol
-    damage: 100
-    range: 100
-    bulletSpeed: 20
-  cam: {fileID: 6942739388234559302}
-  mask:
-    serializedVersion: 2
-    m_Bits: 63
-  bulletPrefab: {fileID: 4309894209080436077, guid: 2df6979a291ea5742a2d76401fa39b76, type: 3}
-  bulletSpawn: {fileID: 7099940574639222199}
---- !u!114 &1420858418539148211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8270388966021528386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda4bd0d98f0be54ea6a4e29ee0693bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncDirection: 0
-  syncMode: 0
-  syncInterval: 0
-  maxHealth: 1
-  disableOnDeath:
-  - {fileID: 470116283159654915}
-  - {fileID: 4697049117983875701}
---- !u!114 &8292248615556619031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8270388966021528386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8bd835cf5d54924b9bc3e9187b04112, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &6709210876627342642
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8270388966021528386}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.01, y: 0.02, z: 0.01}
-  m_Center: {x: 0, y: 0.01, z: 0}
 --- !u!54 &2688518149354107498
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1200,6 +1121,68 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1932139804755883943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8270388966021528386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461ad5ddbf9f91c4b86d658a2db299fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  weapon:
+    name: Pistol
+    damage: 10
+    range: 100
+  cam: {fileID: 6942739388234559302}
+  mask:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &6143752915284535182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8270388966021528386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda4bd0d98f0be54ea6a4e29ee0693bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  maxHealth: 100
+--- !u!136 &8221406099686664092
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8270388966021528386}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.005
+  m_Height: 0.03
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.01, z: -0.002}
 --- !u!1 &8609669298483963592
 GameObject:
   m_ObjectHideFlags: 0
