@@ -715,7 +715,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3239857288960502105}
   - component: {fileID: 5929088144543716147}
-  - component: {fileID: 3579932184384595394}
   - component: {fileID: 3040407622705686369}
   - component: {fileID: 5121562159518694922}
   - component: {fileID: 3095610493386372242}
@@ -755,32 +754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8bd835cf5d54924b9bc3e9187b04112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!143 &3579932184384595394
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2863613874001884131}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2.4
-  m_Radius: 0.5
-  m_SlopeLimit: 50
-  m_StepOffset: 0.25
-  m_SkinWidth: 0.02
-  m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 1.3, z: 0}
 --- !u!195 &3040407622705686369
 NavMeshAgent:
   m_ObjectHideFlags: 0
