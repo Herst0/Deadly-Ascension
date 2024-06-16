@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlayerTakeDamage : MonoBehaviour
 {
     [SerializeField] private float heath, maxHealth = 20f;
+    public int _money;
 
     public void Start()
     {
         heath = maxHealth;
     }
+    
 
     public void TakeDamage(float damage)
     {

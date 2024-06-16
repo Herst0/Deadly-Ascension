@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class collectible : MonoBehaviour
 {
-    
+    private int player;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +17,14 @@ public class collectible : MonoBehaviour
         transform.localRotation = Quaternion.Euler(90f, Time.time * 100f, 0);
     }
 
-    static bool OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            OnCollected?.Invoke();
-            Destroy(gameObject);
-            return true;
+            player = GameObject.Find("Player").GetComponent<int>();
+            player += 1;
+            Destroy(other);
         }
 
-        return false;
     }
 }
