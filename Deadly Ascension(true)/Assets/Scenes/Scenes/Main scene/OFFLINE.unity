@@ -8000,6 +8000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie classique(brown)
       objectReference: {fileID: 0}
+    - target: {fileID: 2939103403662981861, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
+      propertyPath: xp
+      value: 
+      objectReference: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
     - target: {fileID: 3239857288960502105, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1403413
@@ -8524,6 +8528,11 @@ NavMeshAgent:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7fc06011a1706b34a9cd17effc9d6d3c, type: 3}
   m_PrefabInstance: {fileID: 513232391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &521156131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
+  m_PrefabInstance: {fileID: 1561748263}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &521506503 stripped
 Transform:
@@ -27293,16 +27302,52 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie classique(white) (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8258996063104709255, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1561748270}
+    - targetCorrespondingSourceObject: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1561748271}
   m_SourcePrefab: {fileID: 100100000, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
 --- !u!4 &1561748264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4024847483354101870, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
   m_PrefabInstance: {fileID: 1561748263}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1561748270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521156131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a644de4cd4710054d8c941ee08dfbd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1561748271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521156131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b505fa31c12ec9345a9c0e2b23bd31aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookradius: 10
+  heath: 0
+  maxHealth: 6
+  range: 0
+  xp: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
 --- !u!1 &1563905313 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1a36a137b60bb69409cc8a621d360c53, type: 3}
@@ -31810,6 +31855,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie classique(brown) (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2939103403662981861, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
+      propertyPath: xp
+      value: 
+      objectReference: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
     - target: {fileID: 3239857288960502105, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.15
@@ -32421,6 +32470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie classique(brown) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2939103403662981861, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
+      propertyPath: xp
+      value: 
+      objectReference: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
     - target: {fileID: 3239857288960502105, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1403413
@@ -33207,6 +33260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie classique(brown) (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2939103403662981861, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
+      propertyPath: xp
+      value: 
+      objectReference: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
     - target: {fileID: 3239857288960502105, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1403413
@@ -41097,23 +41154,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1526991587345486770, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.12348175
+      value: 0.12348366
       objectReference: {fileID: 0}
     - target: {fileID: 1526991587345486770, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.3145716
+      value: -0.31456912
       objectReference: {fileID: 0}
     - target: {fileID: 1526991587345486770, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.30912867
+      value: -0.3091263
       objectReference: {fileID: 0}
     - target: {fileID: 1526991587345486770, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6401335
+      value: 0.64013463
       objectReference: {fileID: 0}
     - target: {fileID: 1526991587345486770, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.62905747
+      value: -0.6290587
       objectReference: {fileID: 0}
     - target: {fileID: 2924748467818740633, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41125,7 +41182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2924748467818740633, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 40.55
+      value: 9.26
       objectReference: {fileID: 0}
     - target: {fileID: 2924748467818740633, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -41177,27 +41234,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6580027581665909233, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.12348175
+      value: 0.12348366
       objectReference: {fileID: 0}
     - target: {fileID: 6580027581665909233, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.3145716
+      value: -0.31456912
       objectReference: {fileID: 0}
     - target: {fileID: 6580027581665909233, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.30912867
+      value: -0.3091263
       objectReference: {fileID: 0}
     - target: {fileID: 6580027581665909233, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6401335
+      value: 0.64013463
       objectReference: {fileID: 0}
     - target: {fileID: 6580027581665909233, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.62905747
+      value: -0.6290587
       objectReference: {fileID: 0}
     - target: {fileID: 7273053925799632306, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: maxHealth
-      value: 20000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8011261688927274908, guid: 2f401c36938d5d2448a9408c89c9a10d, type: 3}
       propertyPath: field of view
