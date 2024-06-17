@@ -9139,13 +9139,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7fc06011a1706b34a9cd17effc9d6d3c, type: 3}
   m_PrefabInstance: {fileID: 513232391}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
+
 --- !u!1 &521156131 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
   m_PrefabInstance: {fileID: 1561748263}
   m_PrefabAsset: {fileID: 0}
-=======
+
 --- !u!1 &521326665
 GameObject:
   m_ObjectHideFlags: 0
@@ -9210,7 +9210,7 @@ Transform:
   - {fileID: 1434986132}
   m_Father: {fileID: 2047129758}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
+
 --- !u!4 &521506503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4274520445160351026, guid: 00263c4bed3b58d44ace3412e7612a5a, type: 3}
