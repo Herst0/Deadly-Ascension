@@ -4,24 +4,31 @@ using UnityEngine;
 
 public class collectible : MonoBehaviour
 {
-    private PlayerTakeDamage player;
-    
-    // Update is called once per frame
-    void Update()
+    public ManagerUi scoreManager;
+    void Start()
     {
-        transform.localRotation = Quaternion.Euler(90f, Time.time * 100f, 0);
-        
+        scoreManager = GameObject.Find("argent").GetComponent<ManagerUi>();
     }
-    
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            player = GameObject.Find("Player").GetComponent<PlayerTakeDamage>();
-            player._money += 1;
-            Debug.Log("got one" + player._money);
-            Destroy(other);
+            if (gameObject.CompareTag("ADN"))
+            {
+                scoreManager.IncreaseADN();
+            }
+            else
+            {
+                if (gameObject.CompareTag("MoneyP"))
+                {
+                    scoreManager.IncreaseMoney(1);
+                }
+                else
+                {
+                    scoreManager.IncreaseMoney(5);
+                }
+            }
+            gameObject.SetActive(false);
         }
-
     }
 }

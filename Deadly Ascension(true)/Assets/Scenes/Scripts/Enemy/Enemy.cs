@@ -15,6 +15,7 @@ public class Enemies : MonoBehaviour
         private bool playerIsMoving = false; // Indique si le joueur est en mouvement
 
         public GameObject xp;
+        public GameObject money;
  
         private void Start()
         {
@@ -123,6 +124,7 @@ public class Enemies : MonoBehaviour
             if (heath <= 0)
             {
                 Instantiate(xp, transform.position, Quaternion.identity);
+                Instantiate(money, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 //mettre animation de mort
             }

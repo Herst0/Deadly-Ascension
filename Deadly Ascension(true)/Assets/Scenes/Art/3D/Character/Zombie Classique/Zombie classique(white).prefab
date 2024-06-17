@@ -786,6 +786,7 @@ MonoBehaviour:
   maxHealth: 6
   range: 0
   xp: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
+  money: {fileID: 586056676281460132, guid: 484c96a209abd5d4380342749f1b6c52, type: 3}
 --- !u!1 &7240611458721630064
 GameObject:
   m_ObjectHideFlags: 0

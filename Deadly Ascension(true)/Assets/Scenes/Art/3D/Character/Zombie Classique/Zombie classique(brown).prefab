@@ -835,6 +835,15 @@ MonoBehaviour:
   lookradius: 10
   heath: 0
   maxHealth: 6
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  range: 0
+  xp: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
+  money: {fileID: 586056676281460132, guid: 484c96a209abd5d4380342749f1b6c52, type: 3}
+=======
+>>>>>>> a9475e9b4fc2900eafd007455b39c19ed79d43fd
+>>>>>>> Stashed changes
 --- !u!1 &2898355158428612036
 GameObject:
   m_ObjectHideFlags: 0

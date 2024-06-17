@@ -524,7 +524,6 @@ GameObject:
   - component: {fileID: 4701635314196434503}
   - component: {fileID: 4260771113107724759}
   - component: {fileID: 543073179974462190}
-  - component: {fileID: 4187608849288593466}
   - component: {fileID: 897784239563060600}
   m_Layer: 0
   m_Name: T-Pose(2) 1 (1)
@@ -617,23 +616,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b505fa31c12ec9345a9c0e2b23bd31aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookradius: 10
+  lookradius: 14
   heath: 0
-  maxHealth: 6
+  maxHealth: 4
   range: 1
   xp: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
---- !u!114 &4187608849288593466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5357351338468051385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc0eaede2538fb24aae26b780b1547e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  money: {fileID: 586056676281460132, guid: 484c96a209abd5d4380342749f1b6c52, type: 3}
 --- !u!136 &897784239563060600
 CapsuleCollider:
   m_ObjectHideFlags: 0

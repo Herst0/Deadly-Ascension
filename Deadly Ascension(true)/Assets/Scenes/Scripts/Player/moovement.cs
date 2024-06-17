@@ -35,6 +35,7 @@ public class moove : MonoBehaviour
         moveD.y -= gravity * Time.deltaTime;
 
         Cac.Move(moveD * Time.deltaTime);
+        
     }
 
 
