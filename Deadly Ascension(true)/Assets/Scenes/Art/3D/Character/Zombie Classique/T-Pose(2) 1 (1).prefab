@@ -620,6 +620,8 @@ MonoBehaviour:
   lookradius: 10
   heath: 0
   maxHealth: 6
+  range: 1
+  xp: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
 --- !u!114 &4187608849288593466
 MonoBehaviour:
   m_ObjectHideFlags: 0

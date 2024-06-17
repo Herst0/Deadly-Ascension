@@ -1,22 +1,21 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using System.Collections;
-using Random = UnityEngine.Random;
 
-namespace Enemy
+public class Enemies : MonoBehaviour
 {
-    public class Enemies : MonoBehaviour
-    {
         // public int enemyHP = 100;
         public float lookradius = 10f;
         private Transform target;
         private NavMeshAgent agent;
         private Animator enemy;
-        [SerializeField] private float heath, maxHealth = 6f;
+        [SerializeField] private float heath, maxHealth = 6f,range;
         private Vector3 lastPlayerPosition; // Dernière position connue du joueur
         private bool playerIsMoving = false; // Indique si le joueur est en mouvement
 
+        public GameObject xp;
+ 
         private void Start()
         {
             target = PlayerManager.instance.player.transform;
@@ -29,29 +28,30 @@ namespace Enemy
         private void Update()
         {
             float distance = Vector3.Distance(target.position, transform.position);
-            if (distance <= lookradius)
-            {
-                enemy.SetBool("see player", true);
-                agent.SetDestination(target.position);
-
-                if (distance <= agent.stoppingDistance)
+           
+                if (distance <= lookradius)
                 {
-                    FaceTarget(); //faire face au player
+                    enemy.SetBool("see player", true);
+                    agent.SetDestination(target.position);
+                    
+                    if (distance <= agent.stoppingDistance)
+                    {
+                        FaceTarget(); //faire face au player
+                    }
                 }
-            }
-            else
-            {
-                enemy.SetBool("see player", false);
-            }
-            if (target.position != lastPlayerPosition)
-            {
-                playerIsMoving = true;
-                lastPlayerPosition = target.position;
-            }
-            else
-            {
-                playerIsMoving = false;
-            }
+                else
+                {
+                    enemy.SetBool("see player", false);
+                }
+                if (target.position != lastPlayerPosition)
+                {
+                    playerIsMoving = true;
+                    lastPlayerPosition = target.position;
+                }
+                else
+                {
+                    playerIsMoving = false;
+                }
         }
         void FaceTarget()
         {
@@ -68,12 +68,27 @@ namespace Enemy
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player")) // Vérifie si le collider qui entre en collision est celui du joueur
+            if (range == 0)
             {
-                Attack(); // Lance l'attaque si le joueur entre en collision avec l'ennemi
+                if (other.CompareTag("Player")) // Vérifie si le collider qui entre en collision est celui du joueur
+                {
+                    Attack(); // Lance l'attaque si le joueur entre en collision avec l'ennemi
+                }
             }
+            else
+            {
+                if (other.CompareTag("Player"))
+                {
+                    Shoot();
+                }
+            }
+            
         }
 
+        void Shoot()
+        {
+            //faire apparaitre une bullet et pouvoir infliger des dégats au joueur
+        }
         void Attack()
         {
             // Ici, vous pouvez mettre le code pour infliger des dégâts au joueur
@@ -101,15 +116,16 @@ namespace Enemy
          
             }
         }
-
+ 
         public void TakeDamage(float damage)
         {
             heath -= damage;
             if (heath <= 0)
             {
+                Instantiate(xp, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 //mettre animation de mort
             }
         }
     }
-}
+    

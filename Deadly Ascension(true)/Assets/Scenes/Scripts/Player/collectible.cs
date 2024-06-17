@@ -19,6 +19,7 @@ public class collectible : MonoBehaviour
         {
             player = GameObject.Find("Player").GetComponent<PlayerTakeDamage>();
             player._money += 1;
+            Debug.Log("got one" + player._money);
             Destroy(other);
         }
 
