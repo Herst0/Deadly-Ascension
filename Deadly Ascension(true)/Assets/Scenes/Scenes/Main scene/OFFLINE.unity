@@ -8412,7 +8412,7 @@ MonoBehaviour:
   spawnPrefab: {fileID: 622487801}
   anotherPrefab: {fileID: 8874715539533888367}
   definedPosition: {x: -149.31, y: -1.93, z: 123.17}
-  _medik: {fileID: 0}
+  _medik: {fileID: 1163454258035633011, guid: 4c09549d8e98b13489fddb7e5b62c3b0, type: 3}
 --- !u!136 &513232394
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -41091,6 +41091,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2126354429}
     m_Modifications:
     - target: {fileID: 4381403110266546245, guid: 04ae695e235946344b610bb9613e61e4, type: 3}
+      propertyPath: _medik
+      value: 
+      objectReference: {fileID: 1163454258035633011, guid: 4c09549d8e98b13489fddb7e5b62c3b0, type: 3}
+    - target: {fileID: 4381403110266546245, guid: 04ae695e235946344b610bb9613e61e4, type: 3}
       propertyPath: spawnPrefab
       value: 
       objectReference: {fileID: 1456185404}
@@ -42037,6 +42041,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 791525990}
     m_Modifications:
     - target: {fileID: 2329342262439217888, guid: 1a8d35866e8a2a248a1e4479da4f5da7, type: 3}
+      propertyPath: _medik
+      value: 
+      objectReference: {fileID: 1163454258035633011, guid: 4c09549d8e98b13489fddb7e5b62c3b0, type: 3}
+    - target: {fileID: 2329342262439217888, guid: 1a8d35866e8a2a248a1e4479da4f5da7, type: 3}
       propertyPath: spawnPrefab
       value: 
       objectReference: {fileID: 7183616243125537295}
@@ -42200,6 +42208,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 521506503}
     m_Modifications:
+    - target: {fileID: 2058473113571278692, guid: f7386e9502182104bbfa326ef06240bd, type: 3}
+      propertyPath: _medik
+      value: 
+      objectReference: {fileID: 1163454258035633011, guid: 4c09549d8e98b13489fddb7e5b62c3b0, type: 3}
     - target: {fileID: 2058473113571278692, guid: f7386e9502182104bbfa326ef06240bd, type: 3}
       propertyPath: spawnPrefab
       value: 
