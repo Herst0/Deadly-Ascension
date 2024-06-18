@@ -7977,7 +7977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4728073388365983526, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
       propertyPath: damageAmount
-      value: 99
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
       propertyPath: m_Name
@@ -19632,7 +19632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7652897773433869372, guid: 4173b6fe2b69cfe4499c2eccea8a8ed1, type: 3}
       propertyPath: damageAmount
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
