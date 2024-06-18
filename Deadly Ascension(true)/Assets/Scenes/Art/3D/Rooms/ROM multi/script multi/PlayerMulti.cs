@@ -39,12 +39,6 @@ public class PlayerMulti : NetworkBehaviour
         {
             disableOnDeath[i].enabled = wasEnabledOnStart[i];
         }
-
-        Collider col = GetComponent<Collider>();
-        if (col!= null)
-        {
-            col.enabled = true;
-        }
     }
     public void Update()
     {

@@ -7,6 +7,7 @@ namespace Bullet
     {
         [SerializeField] private Transform vfxHitGreen;
         [SerializeField] private Transform vfxHitRed;
+        
 
         public Rigidbody bulletRigidbody;
 

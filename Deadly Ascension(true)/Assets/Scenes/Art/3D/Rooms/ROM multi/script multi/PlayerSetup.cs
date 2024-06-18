@@ -10,6 +10,8 @@ public class PlayerSetup : NetworkBehaviour
     [SerializeField]
     private string remoteLayerName = "RemotePlayer";
 
+    [SerializeField] private string dontDrawLayerName = "DontDraw";
+    [SerializeField] private GameObject playerGraphics;
     private void Start()
     {
         if (!isLocalPlayer)
@@ -19,18 +21,21 @@ public class PlayerSetup : NetworkBehaviour
         }
         else
         {
+            
             sceneCamera=Camera.main;
             if (sceneCamera!=null)
             {
                 sceneCamera.gameObject.SetActive(false);
             }
-    
+
+            Util.SetLayerRecursively(playerGraphics, LayerMask.NameToLayer(dontDrawLayerName));
+
         }
         GetComponent<PlayerMulti>().Setup();
 
-
-
     }
+
+
     
 
     public override void OnStartClient()
