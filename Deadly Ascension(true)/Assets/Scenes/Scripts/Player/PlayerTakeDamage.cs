@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerTakeDamage : MonoBehaviour
 {
-    [SerializeField] private float heath, maxHealth = 20f;
+    [SerializeField] public float heath, maxHealth = 20f;
 
     public void Start()
     {

@@ -620,7 +620,7 @@ MonoBehaviour:
   heath: 0
   maxHealth: 4
   range: 1
-  xp: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
+  xp: {fileID: 3647811222716826416, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
   money: {fileID: 586056676281460132, guid: 484c96a209abd5d4380342749f1b6c52, type: 3}
 --- !u!136 &897784239563060600
 CapsuleCollider:

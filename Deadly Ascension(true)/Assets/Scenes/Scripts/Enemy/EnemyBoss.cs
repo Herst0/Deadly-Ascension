@@ -20,6 +20,7 @@ namespace Enemy
         [SerializeField] private GameObject anotherPrefab; // Deuxième prefab à faire spawn
         [SerializeField] private Vector3 definedPosition; // Position définie pour le deuxième prefab
 
+        public GameObject _medik;
         private void Start()
         {
             target = PlayerManager.instance.player.transform;
@@ -111,6 +112,7 @@ namespace Enemy
             {
                 SpawnPrefab(); // Faire spawn le prefab
                 SpawnAnotherPrefabAtDefinedPosition(); // Faire spawn l'autre prefab à la position définie
+                Instantiate(_medik, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }

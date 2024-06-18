@@ -5,9 +5,11 @@ using UnityEngine;
 public class collectible : MonoBehaviour
 {
     public ManagerUi scoreManager;
+	public PlayerTakeDamage player;
     void Start()
     {
         scoreManager = GameObject.Find("argent").GetComponent<ManagerUi>();
+		player = GameObject.Find("Player").GetComponent<PlayerTakeDamage>();	
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +19,10 @@ public class collectible : MonoBehaviour
             {
                 scoreManager.IncreaseADN();
             }
+			else if (gameObject.CompareTag("Soin"))
+			{
+				player.maxHealth = 20;
+			}
             else
             {
                 if (gameObject.CompareTag("MoneyP"))

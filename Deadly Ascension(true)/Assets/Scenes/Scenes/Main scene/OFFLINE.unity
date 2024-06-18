@@ -7996,10 +7996,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie classique(brown)
       objectReference: {fileID: 0}
-    - target: {fileID: 2939103403662981861, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
-      propertyPath: xp
-      value: 
-      objectReference: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
     - target: {fileID: 3239857288960502105, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1403413
@@ -8416,6 +8412,7 @@ MonoBehaviour:
   spawnPrefab: {fileID: 622487801}
   anotherPrefab: {fileID: 8874715539533888367}
   definedPosition: {x: -149.31, y: -1.93, z: 123.17}
+  _medik: {fileID: 0}
 --- !u!136 &513232394
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8524,11 +8521,6 @@ NavMeshAgent:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7fc06011a1706b34a9cd17effc9d6d3c, type: 3}
   m_PrefabInstance: {fileID: 513232391}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &521156131 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
-  m_PrefabInstance: {fileID: 1561748263}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &521506503 stripped
 Transform:
@@ -14894,10 +14886,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 298690577}
     m_Modifications:
-    - target: {fileID: 40007914546161932, guid: 4173b6fe2b69cfe4499c2eccea8a8ed1, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8d328ac14b9230a40bbc5236464e1e72, type: 2}
     - target: {fileID: 6227930903885624182, guid: 4173b6fe2b69cfe4499c2eccea8a8ed1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.579877
@@ -19629,6 +19617,92 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.12159926, y: 3.370418, z: 11.003269}
   m_Center: {x: -0.43920037, y: 0.27917165, z: -2.9294033}
+--- !u!1001 &1127105689
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 360.80026
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 28.115158
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 285.67395
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+      propertyPath: m_Name
+      value: helico
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1127105691}
+  m_SourcePrefab: {fileID: 100100000, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+--- !u!1 &1127105690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6d975651f52670e4c95309244ce8299a, type: 3}
+  m_PrefabInstance: {fileID: 1127105689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1127105691
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127105690}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5, y: 6, z: 10}
+  m_Center: {x: -0.1, y: 2, z: 1.3}
 --- !u!1 &1127160491
 GameObject:
   m_ObjectHideFlags: 0
@@ -27684,53 +27758,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie classique(white) (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8258996063104709255, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1561748270}
-    - targetCorrespondingSourceObject: {fileID: 6536524146609360872, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1561748271}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
 --- !u!4 &1561748264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4024847483354101870, guid: b5d3b6fca4643194497cbc0016816203, type: 3}
   m_PrefabInstance: {fileID: 1561748263}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1561748270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521156131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a644de4cd4710054d8c941ee08dfbd2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1561748271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521156131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b505fa31c12ec9345a9c0e2b23bd31aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lookradius: 10
-  heath: 0
-  maxHealth: 6
-  range: 0
-  xp: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
-  money: {fileID: 0}
 --- !u!1 &1563905313 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1a36a137b60bb69409cc8a621d360c53, type: 3}
@@ -32239,10 +32276,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie classique(brown) (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 2939103403662981861, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
-      propertyPath: xp
-      value: 
-      objectReference: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
     - target: {fileID: 3239857288960502105, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.15
@@ -32854,10 +32887,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie classique(brown) (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2939103403662981861, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
-      propertyPath: xp
-      value: 
-      objectReference: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
     - target: {fileID: 3239857288960502105, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1403413
@@ -33640,10 +33669,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie classique(brown) (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 2939103403662981861, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
-      propertyPath: xp
-      value: 
-      objectReference: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
     - target: {fileID: 3239857288960502105, guid: 457f7758abbad5d4e800dad038cf881f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1403413
@@ -43093,6 +43118,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 6474809772072540713}
     m_Modifications:
     - target: {fileID: 4379718025374967766, guid: 69b05268cece377469ef64414784677e, type: 3}
+      propertyPath: _medik
+      value: 
+      objectReference: {fileID: 1163454258035633011, guid: 4c09549d8e98b13489fddb7e5b62c3b0, type: 3}
+    - target: {fileID: 4379718025374967766, guid: 69b05268cece377469ef64414784677e, type: 3}
       propertyPath: spawnPrefab
       value: 
       objectReference: {fileID: 973579513}
@@ -44356,3 +44385,4 @@ SceneRoots:
   - {fileID: 1837444130}
   - {fileID: 954234726}
   - {fileID: 4678334961673390203}
+  - {fileID: 1127105689}

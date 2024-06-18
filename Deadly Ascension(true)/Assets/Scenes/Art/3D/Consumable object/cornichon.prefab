@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2064583773352165987
+--- !u!1001 &4494250664913108577
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 79a0af73dd9d79a468115c58ccdf1b49, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0305023
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 79a0af73dd9d79a468115c58ccdf1b49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 36.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 79a0af73dd9d79a468115c58ccdf1b49, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.28048706
+      value: 54.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 79a0af73dd9d79a468115c58ccdf1b49, type: 3}
       propertyPath: m_LocalRotation.w
@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 79a0af73dd9d79a468115c58ccdf1b49, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 79a0af73dd9d79a468115c58ccdf1b49, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 79a0af73dd9d79a468115c58ccdf1b49, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -74,23 +74,37 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 79a0af73dd9d79a468115c58ccdf1b49, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 787423394431208328}
+      addedObject: {fileID: 4789758758580107193}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 79a0af73dd9d79a468115c58ccdf1b49, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 595716539137937119}
+      addedObject: {fileID: 3904257245478583567}
   m_SourcePrefab: {fileID: 100100000, guid: 79a0af73dd9d79a468115c58ccdf1b49, type: 3}
---- !u!1 &1182064958884298546 stripped
+--- !u!1 &3647811222716826416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 79a0af73dd9d79a468115c58ccdf1b49, type: 3}
-  m_PrefabInstance: {fileID: 2064583773352165987}
+  m_PrefabInstance: {fileID: 4494250664913108577}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &787423394431208328
+--- !u!114 &4789758758580107193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3647811222716826416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f839eded4cd6bc54cbd21cd966e2faad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  player: {fileID: 0}
+--- !u!65 &3904257245478583567
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182064958884298546}
+  m_GameObject: {fileID: 3647811222716826416}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -101,32 +115,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.1, z: 0.5}
-  m_Center: {x: -0.1, y: 0.1, z: 0.5}
---- !u!114 &595716539137937119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182064958884298546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f839eded4cd6bc54cbd21cd966e2faad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreManager: {fileID: 0}
-=======
->>>>>>> Stashed changes
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
+  m_Size: {x: 2, y: 0.1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
->>>>>>> a9475e9b4fc2900eafd007455b39c19ed79d43fd

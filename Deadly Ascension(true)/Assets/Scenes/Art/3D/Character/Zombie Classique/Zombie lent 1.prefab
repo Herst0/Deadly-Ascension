@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.7096033
+      value: 8.286321
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.090103
+      value: 11.605
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.2703611
+      value: 0.8195525
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9627591
+      value: -0.57300425
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 148.628
+      value: -69.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -144,7 +144,7 @@ MonoBehaviour:
   heath: 0
   maxHealth: 12
   range: 0
-  xp: {fileID: 1182064958884298546, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
+  xp: {fileID: 3647811222716826416, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
   money: {fileID: 8426644932291411131, guid: ef4931bc6de73294ba2cc5210fc9537e, type: 3}
 --- !u!136 &6276512651451387755
 CapsuleCollider:
