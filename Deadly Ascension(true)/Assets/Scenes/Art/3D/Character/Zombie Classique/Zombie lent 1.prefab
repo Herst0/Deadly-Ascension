@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -58.62
+      value: -10.579877
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.12
+      value: 18.420181
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7eb68eea2523964594d0dae8991a19f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8bd835cf5d54924b9bc3e9187b04112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 1
 --- !u!136 &6276512651451387755
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -147,7 +148,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
