@@ -21,7 +21,7 @@ public class collectible : MonoBehaviour
             }
 			else if (gameObject.CompareTag("Soin"))
 			{
-				player.maxHealth = 20;
+				player.heath = 20;
 			}
             else
             {

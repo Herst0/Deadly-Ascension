@@ -227,8 +227,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099476648117186208}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.30912867, y: 0.6401335, z: -0.62905747, w: -0.3145716}
-  m_LocalPosition: {x: 0.16000003, y: 12.917324, z: 0.12348175}
+  m_LocalRotation: {x: -0.30912852, y: 0.6401336, z: -0.6290575, w: -0.31457147}
+  m_LocalPosition: {x: 0.15999985, y: 12.917326, z: 0.12348175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -300,7 +300,7 @@ Transform:
   m_GameObject: {fileID: 2102455684285482001}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7373971, y: -0, z: -0, w: 0.6754596}
-  m_LocalPosition: {x: 0.16000003, y: 14.636072, z: -9.152948}
+  m_LocalPosition: {x: 0.15999985, y: 14.636072, z: -9.152946}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -437,7 +437,7 @@ Transform:
   m_GameObject: {fileID: 6522052120291450721}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7373971, y: -0, z: -0, w: 0.6754596}
-  m_LocalPosition: {x: 0.16000003, y: 14.636072, z: -9.152948}
+  m_LocalPosition: {x: 0.15999985, y: 14.636072, z: -9.152946}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 3705947982964137487}
   - component: {fileID: 2662843566793603772}
   m_Layer: 8
-  m_Name: Player
+  m_Name: Red
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -614,7 +614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8448836788210416418}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.13, y: -1.5599637, z: 37.767506}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -873,7 +873,7 @@ MonoBehaviour:
   aimColliderLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  debugTransform: {fileID: 5019050321219290314, guid: a84c59f66ad35d441bc07bf7219d146b, type: 3}
+  debugTransform: {fileID: 2166114958136939321, guid: 7c6efb454dc9a3c4692e4269882f3816, type: 3}
   pfBulletProjectile: {fileID: 997478795059004409, guid: dd3070f8ef7d38c46b97e06500c9ab2c, type: 3}
   spawnBulletPosition: {fileID: 5463151186740979569}
 --- !u!114 &7273053925799632306
