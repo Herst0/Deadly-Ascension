@@ -6,20 +6,19 @@ using Mirror;
 
 public class PlayerMulti : NetworkBehaviour
 {
-    [SerializeField]
-    private Behaviour[] disableOnDeath;
-    private bool[] wasEnabledOnStart;
-    [SyncVar]
-    private bool _isDead = false;
+    [SerializeField] private float maxHealth = 100f;
+
+    [SyncVar] private float currentHealth;
+    [SyncVar] private bool _isDead = false;
+
     public bool isDead
     {
         get { return _isDead; }
         protected set { _isDead = value; }
     }
-    [SerializeField]
-    private float maxHealth = 100f;
-    [SyncVar]
-    private float currentHealth;
+
+    [SerializeField] private Behaviour[] disableOnDeath;
+    private bool[] wasEnabledOnStart;
 
     public void Setup()
     {
@@ -28,6 +27,7 @@ public class PlayerMulti : NetworkBehaviour
         {
             wasEnabledOnStart[i] = disableOnDeath[i].enabled;
         }
+
         SetDefaults();
     }
 
@@ -39,7 +39,14 @@ public class PlayerMulti : NetworkBehaviour
         {
             disableOnDeath[i].enabled = wasEnabledOnStart[i];
         }
+
+        Collider col = GetComponent<Collider>();
+        if (col != null)
+        {
+            col.enabled = true;
+        }
     }
+
     public void Update()
     {
         if (!isLocalPlayer)
@@ -49,9 +56,26 @@ public class PlayerMulti : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            RcpTakeDamage(999);
+            RpcTakeDamage(999);
         }
     }
+
+    [ClientRpc]
+    public void RpcTakeDamage(float amount)
+    {
+        if (isDead)
+        {
+            return;
+        }
+
+        currentHealth -= amount;
+        Debug.Log((transform.name + "a maintenant" + currentHealth + "points de vies"));
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
     private IEnumerator Respawn()
     {
         yield return new WaitForSeconds(3f);
@@ -63,20 +87,6 @@ public class PlayerMulti : NetworkBehaviour
 
     }
 
-    [ClientRpc]
-    public void RcpTakeDamage(float amount)
-    {
-        if (isDead)
-        {
-            return;
-        }
-        currentHealth -= amount;
-        Debug.Log(transform.name+"a maintenant"+currentHealth+"points de vies");
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
     private void Die()
     {
         isDead = true;
