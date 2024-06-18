@@ -8,7 +8,6 @@ namespace Bullet
         [SerializeField] private Transform vfxHitGreen;
         [SerializeField] private Transform vfxHitRed;
 
-
         public Rigidbody bulletRigidbody;
 
         public void Awake()
@@ -24,21 +23,32 @@ namespace Bullet
 
         public void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<BulletTarget>() != null)
+            BulletTarget bulletTarget = other.GetComponent<BulletTarget>();
+
+            if (bulletTarget != null)
             {
                 Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
+                int damage = bulletTarget.damageAmount; // Obtenez les dégâts de BulletTarget
 
                 Enemies enemy = other.GetComponent<Enemies>();
                 if (enemy != null)
                 {
-                    enemy.TakeDamage(1);
+                    enemy.TakeDamage(damage);
                 }
                 else
                 {
                     EnemiesBoss enemyBoss = other.GetComponent<EnemiesBoss>();
                     if (enemyBoss != null)
                     {
-                        enemyBoss.TakeDamage(1);
+                        enemyBoss.TakeDamage(damage);
+                    }
+                    else
+                    {
+                        ZombieLent zombieLent = other.GetComponent<ZombieLent>();
+                        if (zombieLent != null)
+                        {
+                            zombieLent.TakeDamage(damage);
+                        }
                     }
                 }
             }

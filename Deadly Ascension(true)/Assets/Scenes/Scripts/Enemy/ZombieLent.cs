@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemies : MonoBehaviour
+public class ZombieLent : MonoBehaviour
 {
-// public int enemyHP = 100;
-public float lookradius = 10f;
-private Transform target;
-private NavMeshAgent agent;
-private Animator enemy;
-[SerializeField] private float heath, maxHealth = 6f,range;
-private Vector3 lastPlayerPosition; // Dernière position connue du joueur
-private bool playerIsMoving = false; // Indique si le joueur est en mouvement
-
-
+    // public int enemyHP = 100;
+    public float lookradius = 10f;
+    private Transform target;
+    private NavMeshAgent agent;
+    private Animator enemy;
+    [SerializeField] private float heath, maxHealth = 6f, range;
+    private Vector3 lastPlayerPosition; // Dernière position connue du joueur
+    private bool playerIsMoving = false; // Indique si le joueur est en mouvement
+    private bool enemymove = false; // Indique si l'ennemi se déplace vers la destination
 
     public GameObject xp;
     public GameObject money;
@@ -31,31 +30,56 @@ private bool playerIsMoving = false; // Indique si le joueur est en mouvement
     private void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
-       
-            if (distance <= lookradius)
+
+        if (distance <= lookradius)
+        {
+            enemy.SetBool("see player", true);
+            agent.SetDestination(target.position);
+
+            if (distance <= agent.stoppingDistance)
             {
-                enemy.SetBool("see player", true);
-                agent.SetDestination(target.position);
-                
-                if (distance <= agent.stoppingDistance)
-                {
-                    FaceTarget(); //faire face au player
-                }
+                FaceTarget(); //faire face au player
             }
-            else
-            {
-                enemy.SetBool("see player", false);
-            }
-            if (target.position != lastPlayerPosition)
-            {
-                playerIsMoving = true;
-                lastPlayerPosition = target.position;
-            }
-            else
-            {
-                playerIsMoving = false;
-            }
+        }
+        else
+        {
+            enemy.SetBool("see player", false);
+        }
+
+        if (target.position != lastPlayerPosition)
+        {
+            playerIsMoving = true;
+            lastPlayerPosition = target.position;
+        }
+        else
+        {
+            playerIsMoving = false;
+        }
+
+        // Mise à jour de la variable enemymove en fonction du déplacement de l'ennemi
+        if (agent.velocity.magnitude > 0.5f)
+        {
+            enemymove = true;
+        }
+        else
+        {
+            enemymove = false;
+        }
+
+        // Mise à jour de l'animation de l'ennemi
+        enemy.SetBool("enemymove", enemymove);
+
+        // Arrêter l'agent si enemymove est false et see player est false
+        if (!enemymove && !enemy.GetBool("see player"))
+        {
+            agent.isStopped = true;
+        }
+        else
+        {
+            agent.isStopped = false;
+        }
     }
+
     void FaceTarget()
     {
         Vector3 direction = (target.position - transform.position).normalized;
@@ -85,13 +109,13 @@ private bool playerIsMoving = false; // Indique si le joueur est en mouvement
                 Shoot();
             }
         }
-        
     }
 
     void Shoot()
     {
         //faire apparaitre une bullet et pouvoir infliger des dégats au joueur
     }
+
     void Attack()
     {
         // Ici, vous pouvez mettre le code pour infliger des dégâts au joueur
@@ -115,8 +139,6 @@ private bool playerIsMoving = false; // Indique si le joueur est en mouvement
                 player.TakeDamage(1); // Infliger des dégâts supplémentaires
                 StartCoroutine(CheckPlayerMovement());
             }
-
-     
         }
     }
 
@@ -132,5 +154,3 @@ private bool playerIsMoving = false; // Indique si le joueur est en mouvement
         }
     }
 }
-
-    
