@@ -8,11 +8,11 @@ namespace Player
     public class ThirdPersonShooter : MonoBehaviour
     {
         [SerializeField] private CinemachineVirtualCamera aimVirtualCamera;
-        [SerializeField] private GameObject sphere;
+     //   [SerializeField] private GameObject sphere;
         [SerializeField] private float normalSensitivity;
         [SerializeField] private float aimSensitivity;
         [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
-        [SerializeField] private Transform debugTransform;
+      //  [SerializeField] private Transform debugTransform;
         [SerializeField] private Transform pfBulletProjectile;
         [SerializeField] private Transform spawnBulletPosition;
         private Vector3 spherePosition;
@@ -29,7 +29,7 @@ namespace Player
 
             // Assurez-vous que  la sphère est désactivé au démarrage
            
-            sphere.SetActive(false);
+          //  sphere.SetActive(false);
         }
 
         private void Update()
@@ -40,7 +40,7 @@ namespace Player
             Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
             if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
             {
-                debugTransform.position = raycastHit.point;
+                //debugTransform.position = raycastHit.point;
                 mouseWorldPosition = raycastHit.point;
             }
             spherePosition = raycastHit.point;
@@ -53,7 +53,7 @@ namespace Player
                 animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 1f, Time.deltaTime * 10f));
 
                 // Activer la sphère lorsque le joueur vise
-                sphere.SetActive(true);
+                //sphere.SetActive(true);
 
                 Vector3 worldAimTarget = mouseWorldPosition;
                 worldAimTarget.y = transform.position.y;
@@ -77,7 +77,7 @@ namespace Player
 
                 // Désactiver la sphère lorsque le joueur ne vise pas
               
-                sphere.SetActive(false);
+              //  sphere.SetActive(false);
             }
 
             if (starterAssetsInputs.shoot)
