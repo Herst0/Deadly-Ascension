@@ -5,22 +5,24 @@ using Player;
 
 public class SkillTree : MonoBehaviour
 {
+    
     PlayerTakeDamage playerTakeDamage;
-
+    BulletTarget bulletTarget;
 
     void Awake()
     {
         playerTakeDamage = GetComponent<PlayerTakeDamage>();
+        bulletTarget = GetComponent<BulletTarget>();
     }
 
-    public void DefenceUp()
+    public void DmgUp()
     {
-        playerTakeDamage.defence += 0.3f;
+        bulletTarget.damageAmount += 1;
     }
 
     public void HealthUp()
     {
-        playerTakeDamage.maxHealth += 5f;
-        playerTakeDamage.health = playerTakeDamage.maxHealth; // Optionnel : réinitialiser la santé actuelle
+        playerTakeDamage.maxHealth += 5;
+        playerTakeDamage.health += 5 ; // Optionnel : réinitialiser la santé actuelle
     }
 }
