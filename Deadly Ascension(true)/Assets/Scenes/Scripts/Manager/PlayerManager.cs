@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+  
+  public GameObject player;
+  
   #region Singleton
 
   public static PlayerManager instance;
@@ -15,6 +18,5 @@ public class PlayerManager : MonoBehaviour
   }
 
   #endregion
-
-  public GameObject player;
+  
 }

@@ -404,5 +404,37 @@ namespace StarterAssets
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
         }
+
+        private void Dodge()
+        {
+            /*if (Input.GetButtonDown("z") && Input.GetButtonDown("f"))
+            {
+                var target1 = GameObject.Find("Player");
+                animator.SetBool("dodge", true);
+                transform.position = Vector3(+2,0,0);
+            }
+            else if (Input.GetButtonDown("q") && Input.GetButtonDown("f"))
+            {
+                var target1 = GameObject.Find("Player");
+                animator.SetBool("dodge", true);
+                transform.position = Vector3(+2,0,0);
+            }
+            else if (Input.GetButtonDown("d") && Input.GetButtonDown("f"))
+            {
+                var target1 = GameObject.Find("Player");
+                animator.SetBool("dodge", true);
+                transform.position = Vector3(+2,0,0);
+            }
+            else if (Input.GetButtonDown("s") && Input.GetButtonDown("f"))
+            {
+                var target1 = GameObject.Find("Player");
+                animator.SetBool("dodge", true);
+                transform.position = Vector3(+2,0,0);
+            }
+            else
+            {
+                
+            }*/
+        }
     }
 }
