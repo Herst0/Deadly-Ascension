@@ -459,13 +459,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimVirtualCamera: {fileID: 6888438205285002449}
-  sphere: {fileID: 5564445286030787171, guid: 755a3aba20d9960498c734dcdab32fe5, type: 3}
   normalSensitivity: 2
   aimSensitivity: 0.5
   aimColliderLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  debugTransform: {fileID: 2166114958136939321, guid: 7c6efb454dc9a3c4692e4269882f3816, type: 3}
   pfBulletProjectile: {fileID: 997478795059004409, guid: dd3070f8ef7d38c46b97e06500c9ab2c, type: 3}
   spawnBulletPosition: {fileID: 6309177811670438248}
 --- !u!114 &5917780625635337999
@@ -480,8 +478,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c029dc8e775a4eb4fb0547b41ad109f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heath: 0
-  maxHealth: 20
+  health: 0
+  maxHealth: 40
+  defence: 1
 --- !u!54 &4498071457612221893
 Rigidbody:
   m_ObjectHideFlags: 0
