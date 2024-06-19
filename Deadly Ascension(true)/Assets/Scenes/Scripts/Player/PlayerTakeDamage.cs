@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class PlayerTakeDamage : MonoBehaviour
 {
-    [SerializeField] public float heath, maxHealth = 20f;
+     public float health, maxHealth = 20f;
+     public float defence = 1f;
 
-    public void Start()
+    void Start()
     {
-        heath = maxHealth;
+        health = maxHealth;
     }
-    
 
     public void TakeDamage(float damage)
     {
-        heath -= damage;
-        if (heath <= 0)
+        health -= damage / defence;
+        if (health <= 0)
         {
             Destroy(gameObject);
             //mort du perso à intégrer
