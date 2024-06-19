@@ -13,7 +13,8 @@ public class ZombieLent : MonoBehaviour
     [SerializeField] private float heath, maxHealth = 6f, range;
     private Vector3 lastPlayerPosition; // Dernière position connue du joueur
     private bool playerIsMoving = false; // Indique si le joueur est en mouvement
-    private bool enemymove = false; // Indique si l'ennemi se déplace vers la destination
+    private bool enemymove = false; 
+    private bool isDead = false;// Indique si l'ennemi se déplace vers la destination
 
     public GameObject xp;
     public GameObject money;
@@ -29,6 +30,7 @@ public class ZombieLent : MonoBehaviour
 
     private void Update()
     {
+        if (isDead) return; 
         float distance = Vector3.Distance(target.position, transform.position);
 
         if (distance <= lookradius)
@@ -147,10 +149,17 @@ public class ZombieLent : MonoBehaviour
         heath -= damage;
         if (heath <= 0)
         {
+            isDead = true;
+            enemy.SetBool("mort", true);
             Instantiate(xp, transform.position, Quaternion.identity);
             Instantiate(money, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            StartCoroutine(DeathCoroutine());
             //mettre animation de mort
         }
+    }
+    IEnumerator DeathCoroutine()
+    {
+        yield return new WaitForSeconds(2f); // Attendre 4 secondes
+        Destroy(gameObject); // Détruire l'objet
     }
 }

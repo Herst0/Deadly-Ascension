@@ -34,6 +34,10 @@ namespace Player
 
         private void Update()
         {
+            if (!enabled)return;
+            {
+                
+            }
             Vector3 mouseWorldPosition = Vector3.zero;
 // Décaler le centre de l'écran vers le bas et la gauche
             Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f - 20f);

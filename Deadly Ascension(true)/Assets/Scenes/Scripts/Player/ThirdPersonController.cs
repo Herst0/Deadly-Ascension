@@ -162,6 +162,8 @@ namespace StarterAssets
 
         private void Update()
         {
+            if (!enabled) return; // Check if the script is enabled
+
             _hasAnimator = TryGetComponent(out _animator);
 
             JumpAndGravity();

@@ -18,7 +18,8 @@ namespace Enemy
         private bool playerIsMoving = false; // Indique si le joueur est en mouvement
         [SerializeField] private GameObject spawnPrefab; // Prefab à faire spawn
         [SerializeField] private GameObject anotherPrefab; // Deuxième prefab à faire spawn
-        [SerializeField] private Vector3 definedPosition; // Position définie pour le deuxième prefab
+        [SerializeField] private Vector3 definedPosition; 
+        private bool isDead = false; // Position définie pour le deuxième prefab
 
         public GameObject _medik;
         private void Start()
@@ -32,6 +33,8 @@ namespace Enemy
 
         private void Update()
         {
+            if (isDead) return; 
+            
             float distance = Vector3.Distance(target.position, transform.position);
             if (distance <= lookradius)
             {
@@ -85,8 +88,13 @@ namespace Enemy
             PlayerTakeDamage player = target.GetComponent<PlayerTakeDamage>();
             if (player != null)
             {
+                enemy.SetBool("touchplayer", true);
                 player.TakeDamage(1);
                 StartCoroutine(CheckPlayerMovement());
+            }
+            else
+            {
+                enemy.SetBool("touchplayer", false);
             }
         }
 
@@ -99,10 +107,12 @@ namespace Enemy
                 PlayerTakeDamage player = target.GetComponent<PlayerTakeDamage>();
                 if (player != null)
                 {
+                    enemy.SetBool("touchplayer", true);
                     player.TakeDamage(1); // Infliger des dégâts supplémentaires
                     StartCoroutine(CheckPlayerMovement());
                 }
             }
+            enemy.SetBool("touchplayer", false);
         }
 
         public void TakeDamage(float damage)
@@ -110,11 +120,18 @@ namespace Enemy
             heath -= damage;
             if (heath <= 0)
             {
+                isDead = true;
+                enemy.SetBool("mort", true);
                 SpawnPrefab(); // Faire spawn le prefab
                 SpawnAnotherPrefabAtDefinedPosition(); // Faire spawn l'autre prefab à la position définie
                 Instantiate(_medik, transform.position, Quaternion.identity);
-                Destroy(gameObject);
+                StartCoroutine(DeathCoroutine());
             }
+        }
+        IEnumerator DeathCoroutine()
+        {
+            yield return new WaitForSeconds(3f); // Attendre 2 secondes
+            Destroy(gameObject); // Détruire l'objet
         }
 
         void SpawnPrefab()
