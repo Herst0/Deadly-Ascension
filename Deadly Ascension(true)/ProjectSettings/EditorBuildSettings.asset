@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Scenes/Main scene/ONLINE.unity
     guid: 09e3297ac7e546b418a3ae08797cbc26
   - enabled: 1
+    path: Assets/Scenes/Scenes/Main scene/Shop.unity
+    guid: d315867b6d350b6439988263dc1eb987
+  - enabled: 0
     path: Assets/Scenes/Scenes/Main scene/CHARA.unity
     guid: 499f3fc2eba45084f9fa462f14b39134
   m_configObjects:

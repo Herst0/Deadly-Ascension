@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -96,6 +97,11 @@ public class Enemies : MonoBehaviour
 
     void Attack()
     {
+        ThirdPersonController playerController = target.GetComponent<ThirdPersonController>();
+        if (playerController != null && playerController.isDodging)
+        {
+            return; // Ne pas attaquer si le joueur est en train de dodger
+        }
         // Ici, vous pouvez mettre le code pour infliger des dégâts au joueur
         PlayerTakeDamage player = target.GetComponent<PlayerTakeDamage>();
         if (player != null)
@@ -137,7 +143,7 @@ public class Enemies : MonoBehaviour
 
     IEnumerator DeathCoroutine()
     {
-        yield return new WaitForSeconds(2f); // Attendre 2 secondes
+        yield return new WaitForSeconds(1f); // Attendre 2 secondes
         Destroy(gameObject); // Détruire l'objet
     }
 }

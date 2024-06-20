@@ -12,6 +12,7 @@ TagManager:
   - MoneyB
   - ADN
   - Soin
+  - Strong
   layers:
   - Default
   - TransparentFX

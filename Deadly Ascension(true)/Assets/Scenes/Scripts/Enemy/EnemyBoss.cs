@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using StarterAssets;
 using Random = UnityEngine.Random;
 
 namespace Enemy
@@ -84,6 +85,11 @@ namespace Enemy
 
         void Attack()
         {
+            ThirdPersonController playerController = target.GetComponent<ThirdPersonController>();
+            if (playerController != null && playerController.isDodging)
+            {
+                return; // Ne pas attaquer si le joueur est en train de dodger
+            }
             // Ici, vous pouvez mettre le code pour infliger des dégâts au joueur
             PlayerTakeDamage player = target.GetComponent<PlayerTakeDamage>();
             if (player != null)

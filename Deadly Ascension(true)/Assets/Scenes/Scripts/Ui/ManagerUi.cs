@@ -9,6 +9,9 @@ public class ManagerUi : MonoBehaviour
 
     public int _adn;
     public int _money;
+    private int CostMedikit = 20;
+    private int CostStrong = 30;
+
     void Start()
     {
         ADNText.text = "ADN : " + _adn;
@@ -20,10 +23,38 @@ public class ManagerUi : MonoBehaviour
         _adn += 1;
         ADNText.text = "ADN : " + _adn;
     }
-    
+
     public void IncreaseMoney(int _quantity)
     {
         _money += _quantity;
         MoneyText.text = "Money : " + _money;
+    }
+
+    public bool Buymedikit()
+    {
+        if (_money >= CostMedikit)
+        {
+            _money -= CostMedikit;
+            MoneyText.text = "Money : " + _money;
+            return true;
+        }
+        else
+        {
+            print("Not enough money");
+            return false;
+        }
+    }    public bool BuyStrong()
+    {
+        if (_money >= CostStrong)
+        {
+            _money -= CostStrong;
+            MoneyText.text = "Money : " + _money;
+            return true;
+        }
+        else
+        {
+            print("Not enough money");
+            return false;
+        }
     }
 }

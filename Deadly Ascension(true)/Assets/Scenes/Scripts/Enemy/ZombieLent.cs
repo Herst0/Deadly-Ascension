@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -120,6 +121,11 @@ public class ZombieLent : MonoBehaviour
 
     void Attack()
     {
+        ThirdPersonController playerController = target.GetComponent<ThirdPersonController>();
+        if (playerController != null && playerController.isDodging)
+        {
+            return; // Ne pas attaquer si le joueur est en train de dodger
+        }
         // Ici, vous pouvez mettre le code pour infliger des dégâts au joueur
         PlayerTakeDamage player = target.GetComponent<PlayerTakeDamage>();
         if (player != null)
