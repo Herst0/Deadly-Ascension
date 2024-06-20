@@ -48030,18 +48030,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1106618790166561459, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1798483948923775247, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
       propertyPath: m_Name
       value: UI Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072128891858283549, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2864873560224012655, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 541679838}
+    - target: {fileID: 4333861915174502695, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 93
+      objectReference: {fileID: 0}
     - target: {fileID: 5221394911664140543, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 541679838}
+    - target: {fileID: 7297221456307510332, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816654052854259419, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8973585055095142160, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.7857854
@@ -48085,6 +48105,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1584275821498485153, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
+    - {fileID: 7558410430708091325, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
+    - {fileID: 5117908809035770503, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8973585055095142160, guid: 999f15e5e7004e44eb0950a0a9c37881, type: 3}
       insertIndex: -1

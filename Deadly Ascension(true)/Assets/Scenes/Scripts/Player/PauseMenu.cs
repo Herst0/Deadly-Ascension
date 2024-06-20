@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Player;
+using StarterAssets;
 public class PauseMenu : MonoBehaviour
 {
     
     public GameObject pauseMenuUI;
     public static bool GameIsPaused =false;
-
-    // Update is called once per frame
+    private ThirdPersonController thirdPersonController;
+    private ThirdPersonShooter thirdPersonShooter;
+    
+    
+    void Start()
+    {
+        thirdPersonController = GetComponent<ThirdPersonController>();
+        thirdPersonShooter = GetComponent<ThirdPersonShooter>();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -28,12 +36,16 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         GameIsPaused = false;
+        thirdPersonController.enabled = true;
+        thirdPersonShooter.enabled = true;
     }
 
     void Pause()
     {
         pauseMenuUI.SetActive(true);
         GameIsPaused = true;
+        thirdPersonController.enabled = false;
+        thirdPersonShooter.enabled = false;
     }
 
 

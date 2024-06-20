@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Player;
+using StarterAssets;
 
 public class SkillTree : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class SkillTree : MonoBehaviour
     {
         playerTakeDamage = GetComponent<PlayerTakeDamage>();
         bulletTarget = GetComponent<BulletTarget>();
+
     }
 
     public void DmgUp()
