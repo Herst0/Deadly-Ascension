@@ -21,7 +21,7 @@ public class PlayerTakeDamage : MonoBehaviour
         thirdPersonShooter = GetComponent<ThirdPersonShooter>();
         
         animator.SetBool("mort", false);
-        animator.SetBool("mort", false);
+       
     }
 
     public void TakeDamage(float damage)
