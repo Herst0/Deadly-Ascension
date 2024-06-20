@@ -12,7 +12,9 @@ public class PlayerTakeDamage : MonoBehaviour
     private ThirdPersonController thirdPersonController;
     private ThirdPersonShooter thirdPersonShooter;
     private bool isDead = false;
-
+    
+    public Transform player, destination;
+    public GameObject playerg;
     void Start()
     {
         health = maxHealth;
@@ -21,6 +23,11 @@ public class PlayerTakeDamage : MonoBehaviour
         thirdPersonShooter = GetComponent<ThirdPersonShooter>();
         
         animator.SetBool("mort", false);
+        
+        playerg.SetActive(false);
+        player.position = destination.position;
+        playerg.SetActive(true);
+        
        
     }
 
