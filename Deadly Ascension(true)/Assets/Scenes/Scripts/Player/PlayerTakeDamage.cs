@@ -1,6 +1,7 @@
 using Player;
 using StarterAssets;
 using UnityEngine;
+using System.Threading.Tasks;
 
 public class PlayerTakeDamage : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class PlayerTakeDamage : MonoBehaviour
         animator = GetComponent<Animator>();
         thirdPersonController = GetComponent<ThirdPersonController>();
         thirdPersonShooter = GetComponent<ThirdPersonShooter>();
+        
+        animator.SetBool("mort", false);
+        animator.SetBool("mort", false);
     }
 
     public void TakeDamage(float damage)
@@ -30,8 +34,21 @@ public class PlayerTakeDamage : MonoBehaviour
             Die();
         }
     }
+    
+    private async Task respawn()
+    {
+        await Task.Delay(4000);
+        thirdPersonController.enabled = true;
+        thirdPersonShooter.enabled = true;
+        isDead = false;
+        
+       
+       
+        Start();
+        
+    }
 
-    private void Die()
+    private void Die()      
     {
         isDead = true;
         animator.SetBool("mort", true);
@@ -39,5 +56,10 @@ public class PlayerTakeDamage : MonoBehaviour
         // Disable player controls
         thirdPersonController.enabled = false;
         thirdPersonShooter.enabled = false;
+        
+        
+        respawn();
     }
+
+
 }
