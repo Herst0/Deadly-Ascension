@@ -383,6 +383,37 @@ Transform:
   - {fileID: 1146063429663151504}
   m_Father: {fileID: 3778657045332005167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3421016681768834456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1746746599743234800}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1746746599743234800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3421016681768834456}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.01828, z: 0.00533}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3053995724986276418}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3750973562073824319
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,11 +554,11 @@ GameObject:
   - component: {fileID: 6814367501170553481}
   - component: {fileID: 4701635314196434503}
   - component: {fileID: 4260771113107724759}
-  - component: {fileID: 543073179974462190}
   - component: {fileID: 897784239563060600}
+  - component: {fileID: 4744312287308052996}
   m_Layer: 0
   m_Name: T-Pose(2) 1 (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -547,6 +578,7 @@ Transform:
   m_Children:
   - {fileID: 7311652936824385081}
   - {fileID: 2323235561803525501}
+  - {fileID: 1746746599743234800}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6814367501170553481
@@ -605,24 +637,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
---- !u!114 &543073179974462190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5357351338468051385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b505fa31c12ec9345a9c0e2b23bd31aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lookradius: 14
-  heath: 0
-  maxHealth: 4
-  range: 1
-  xp: {fileID: 3647811222716826416, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
-  money: {fileID: 586056676281460132, guid: 484c96a209abd5d4380342749f1b6c52, type: 3}
 --- !u!136 &897784239563060600
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -646,6 +660,24 @@ CapsuleCollider:
   m_Height: 0.024
   m_Direction: 1
   m_Center: {x: 0, y: 0.013, z: 0}
+--- !u!114 &4744312287308052996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5357351338468051385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a39411204314275956d17f8f54c696e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookRadius: 10
+  attackRange: 10
+  projectilePrefab: {fileID: 6553252218508022458, guid: e21c747034cef104a8dcfd351184e733, type: 3}
+  firePoint: {fileID: 1746746599743234800}
+  xpPrefab: {fileID: 3647811222716826416, guid: 76c01ce1558012e41aa2e32cf7fe669a, type: 3}
+  coinsPrefab: {fileID: 586056676281460132, guid: 484c96a209abd5d4380342749f1b6c52, type: 3}
 --- !u!1 &6020068720780582823
 GameObject:
   m_ObjectHideFlags: 0

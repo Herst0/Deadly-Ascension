@@ -50,6 +50,14 @@ namespace Bullet
                         {
                             zombieLent.TakeDamage(damage);
                         }
+                        else
+                        {
+                            EnemyTireur enemyTireur = other.GetComponent<EnemyTireur>();
+                            if (enemyTireur!=null)
+                            {
+                                enemyTireur.TakeDamage(damage);
+                            }
+                        }
                     }
                 }
             }

@@ -143,7 +143,7 @@ public class Enemies : MonoBehaviour
 
     IEnumerator DeathCoroutine()
     {
-        yield return new WaitForSeconds(1f); // Attendre 2 secondes
+        yield return new WaitForSeconds(2f); // Attendre 2 secondes
         Destroy(gameObject); // Détruire l'objet
     }
 }
